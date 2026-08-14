@@ -1,0 +1,609 @@
+<!DOCTYPE html><html lang="no"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Invite AS DPA - SuperInvite</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap"><link rel="alternate" hreflang="no" href="https://www.superinvite.com/no/news/invite-as-dpa/"><link rel="alternate" hreflang="x-default" href="https://www.superinvite.com/no/news/invite-as-dpa/"><link rel="stylesheet" href="/_astro/SiteIcons.BQ_A-Nwp.css">
+<style>:root{--font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;--font-heading: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;--brand: #41AB34;--brand-ink: #ffffff}.atoll-header{--cm-panel-max-width: none}body{font-family:var(--font-body)}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading)}
+</style></head> <body> <header class="atoll-header"> <a href="/no/" style="display:inline-flex;align-items:center"><img src="/media/superinvite-logo-Website-1.png" alt="SuperInvite" style="height:48px;width:auto;display:block"/></a>
+<nav class="cm-nav"><style>
+  .atoll-header {
+    --atoll-header-max-width: 1300px;
+    --atoll-header-padding-inline: 30px;
+    --atoll-header-padding-block: 0px;
+    --atoll-header-min-height: 100px;
+    --atoll-header-border-width: 0px;
+    --atoll-header-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+</style><style>
+        .cm-nav { display: flex; align-items: center; gap: 30px; font-family: var(--font-body, Roboto, sans-serif); }
+        .cm-nav-toggle { display: none; }
+        .cm-nav-hamburger { display: none; cursor: pointer; padding: 8px; background: none; border: none; color: #333; }
+        .cm-nav-hamburger svg { display: block; }
+        .cm-nav-links { display: contents; }
+        .cm-nav a.cm-nav-link, .cm-nav span.cm-nav-link { color: #5C6B79; font-weight: 400; font-size: 17px; text-decoration: none; transition: color 0.15s; }
+        /* Chevron inherits the link colour, so it greens on hover too */
+        .cm-nav .cm-caret { margin-left: 5px; flex: none; }
+        @media (min-width: 1024px) {
+          /* Nav items span the full header height (as on cupmanager.net), for
+             two reasons: the mega panel is positioned at top:100% of its item,
+             so anything shorter drops it *inside* the header; and it gives the
+             hover target the whole bar rather than just the text. Going
+             inline-flex also stops the chevron inflating the trigger's line
+             box, which would knock it off the centre line of its neighbours. */
+          /* The nav must fill the header before its items can; otherwise
+             stretching them only reaches the nav's own content height. */
+          .cm-nav { align-self: stretch; }
+          .cm-nav > .cm-nav-links > a.cm-nav-link,
+          .cm-nav > .cm-nav-links > .cm-mi-wrap { align-self: stretch; display: inline-flex; align-items: center; }
+          .cm-nav .cm-mi-wrap > a.cm-nav-link,
+          .cm-nav .cm-mi-wrap > span.cm-nav-link { display: inline-flex; align-items: center; height: 100%; }
+        }
+        .cm-nav a.cm-nav-link:hover, .cm-nav .cm-mi-wrap:hover > a.cm-nav-link, .cm-nav .cm-mi-wrap:hover > span.cm-nav-link { color: var(--brand); }
+        .cm-nav span.cm-nav-link { cursor: default; }
+        @media (max-width: 1024px) {
+          .cm-nav .cm-caret { display: none; }
+          .cm-nav-hamburger { display: block; }
+          .cm-nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-bottom: 1px solid #eee; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); z-index: 50; padding: 0 24px 12px; }
+          .cm-nav-links > a, .cm-nav-links .cm-mi-wrap { display: block; padding: 12px 0; border-top: 1px solid #f0f0f0; }
+          .cm-nav-toggle:checked ~ .cm-nav-links { display: flex; }
+        }
+      </style><input type="checkbox" id="cm-nav-toggle" class="cm-nav-toggle" hidden=""/><label for="cm-nav-toggle" class="cm-nav-hamburger" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label><div class="cm-nav-links"><a href="/no/" class="cm-nav-link">Hjem</a><div class="cm-mi-wrap"><style>
+          /* Deliberately NOT positioned: the panel spans the viewport, so its
+             containing block has to be the header (.atoll-header is relative,
+             from the library's globals) rather than the item. Items stretch to
+             the full header height, so top:100% lands in the same place either
+             way. */
+          .cm-mi-panel { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-top: 1px solid var(--brand); border-bottom: 1px solid var(--brand); z-index: 60; }
+          .cm-mi-wrap:hover > .cm-mi-panel, .cm-mi-wrap:focus-within > .cm-mi-panel { display: block; }
+          /* The two halves meet at the centre of the viewport. Contained keeps
+             them inside the header's content width (cupmanager.net); full lets
+             the colour bleed to the edges (superinvite.com). */
+          .cm-mi-panel-inner { display: flex; max-width: var(--cm-panel-max-width, 1300px); margin: 0 auto; }
+          .cm-mi-panel-highlights { background: var(--brand); flex: 0 0 50%; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; justify-content: center; padding: 44px 20px 44px 27%; }
+          .cm-nav .cm-mi-panel-highlights a.cm-nav-link { color: #fff; font-weight: 400; font-size: 18px; display: inline-flex; align-items: center; gap: 14px; }
+          .cm-mi-panel-highlights svg { width: 20px; height: 20px; flex: none; }
+          .cm-nav .cm-mi-panel-highlights a.cm-nav-link:hover { color: rgba(255,255,255,0.8); }
+          .cm-mi-panel-main { background: #f5f5f5; flex: 0 0 50%; min-width: 0; box-sizing: border-box; padding: 44px 6% 44px 5%; }
+          .cm-mi-panel-heading { font-family: var(--font-heading, Montserrat, sans-serif); font-weight: 600; font-size: 22px; color: #162B40; margin: 0 0 6px; padding-bottom: 14px; border-bottom: 2px solid var(--brand); }
+          /* Multi-column, not grid: the live panels fill the first column
+             before starting the second, and column-count does that for any
+             number of links without the markup naming a row count. */
+          .cm-mi-panel-links { columns: 2; column-gap: 32px; margin-top: 20px; }
+          .cm-nav .cm-mi-panel-links a.cm-nav-link { display: block; break-inside: avoid; margin-bottom: 18px; color: #5C6B79; font-weight: 400; font-size: 15px; }
+          .cm-nav .cm-mi-panel-links a.cm-nav-link:hover { color: var(--brand); }
+          @media (max-width: 1024px) {
+            .cm-mi-panel { display: block; position: static; border: 0; background: transparent; }
+            .cm-mi-panel-inner { display: block; max-width: none; }
+            .cm-mi-panel-highlights { display: none; }
+            .cm-mi-panel-main { background: transparent; padding: 8px 0 0 12px; }
+            .cm-mi-panel-heading { display: none; }
+            .cm-mi-panel-links { columns: 1; margin-top: 4px; }
+            .cm-nav .cm-mi-panel-links a.cm-nav-link { margin-bottom: 10px; }
+          }
+        </style><span class="cm-nav-link" tabindex="0" role="button" aria-haspopup="true">Om SuperInvite<svg class="cm-caret" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><div class="cm-mi-panel"><div class="cm-mi-panel-inner"><div class="cm-mi-panel-highlights"><a href="/no/funksjoner-i-superinvite/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>Funksjoner</a><a href="/no/nyheter/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Nyheter</a><a href="/no/priser/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"></circle></svg>Priser</a></div><div class="cm-mi-panel-main"><p class="cm-mi-panel-heading">Hva ønsker du å vite?</p><div class="cm-mi-panel-links"><a href="/no/fleksibel-losning/" class="cm-nav-link">Fleksibel betalingsløsning</a><a href="/no/autotrekk-og-delbetaling/" class="cm-nav-link">Delbetaling og Autotrekk</a><a href="/no/kommunikasjon/" class="cm-nav-link">Kommunikasjon</a><a href="/no/oppgjor-og-okonomi/" class="cm-nav-link">Oppgjør og økonomi</a><a href="/no/lister-og-oversikt/" class="cm-nav-link">Lister og oversikt</a><a href="/no/deltakere-og-qr-kode/" class="cm-nav-link">Deltakere og QR koder</a></div></div></div></div></div><a href="/no/support/" class="cm-nav-link">Support</a><a href="/no/ressurser/" class="cm-nav-link">Ressurser</a><div class="cm-mi-wrap cm-mi-drop"><style>
+          /* Positioned on .cm-mi-drop, never on .cm-mi-wrap: the mega panel
+             spans the window and depends on .cm-mi-wrap staying static so that
+             its containing block is the header. This card is the opposite —
+             it hangs off its own item — so only dropdown items get a
+             containing block, and panel items are left alone. */
+          .cm-mi-drop { position: relative; }
+          /* Measured off superinvite.com: a white card the width of two nav
+             items, separated by the same soft shadow as the header itself. */
+          .cm-mi-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 280px; box-sizing: border-box; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 15px; z-index: 60; }
+          .cm-mi-drop:hover > .cm-mi-menu, .cm-mi-drop:focus-within > .cm-mi-menu { display: block; }
+          /* Tighter than the body line-height, to the live card's 37px rows —
+             the labels are single words and nowrap keeps them so. */
+          .cm-nav .cm-mi-menu a.cm-nav-link { display: block; padding: 10px 8px 8px 10px; font-size: 17px; line-height: 1.1; color: #5C6B79; white-space: nowrap; }
+          .cm-nav .cm-mi-menu a.cm-nav-link:hover { color: var(--brand); }
+          @media (max-width: 1024px) {
+            /* No hovering on a phone: the card unfolds into the hamburger menu
+               as an indented list under its item, as the mega panel does. */
+            .cm-mi-menu { display: block; position: static; min-width: 0; background: transparent; box-shadow: none; padding: 4px 0 0 12px; }
+            .cm-nav .cm-mi-menu a.cm-nav-link { padding: 0; margin-bottom: 10px; }
+          }
+        </style><span class="cm-nav-link" tabindex="0" role="button" aria-haspopup="true">Booke demo<svg class="cm-caret" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><div class="cm-mi-menu"><a href="https://calendly.com/havard-3/superinvite-demo" class="cm-nav-link">Norsk</a><a href="https://calendly.com/jimmy-280/superinvite-demo" class="cm-nav-link">Svenska</a><a href="https://calendly.com/petronella/superinvite-demo" class="cm-nav-link">Dansk</a><a href="https://calendly.com/havard-3/superinvite-demo" class="cm-nav-link">English</a></div></div><a href="https://www.superinvite.no/#/login" style="display:inline-flex;align-items:center;gap:8px;background-color:var(--brand);color:#fff;border-radius:3px;font-family:var(--font-body, Roboto, sans-serif);font-weight:300;text-decoration:none;white-space:nowrap;font-size:16px;padding:10px 30px">Login</a></div><script>(function(){
+        var path = location.pathname.replace(/\/$/, '');
+        var links = document.querySelectorAll('.cm-nav > .cm-nav-links > a.cm-nav-link, .cm-nav > .cm-nav-links > .cm-mi-wrap > a.cm-nav-link');
+        links.forEach(function(a){
+          var href = a.getAttribute('href');
+          if (!href) return;
+          var norm = href.replace(/\/$/, '');
+          if (norm === path || (norm !== '/sv' && path.indexOf(norm + '/') === 0)) a.style.color = 'var(--brand)';
+        });
+      })();</script></nav> </header> <main> <section style="padding:60px 10%;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:1140px;margin:0 auto"><h2 class="cm-sec-heading" style="color:#2C3338;font-size:60px;font-weight:600;margin-bottom:14px;font-family:var(--font-heading, Montserrat, sans-serif)">Invite AS DPA</h2><div style="width:52px;height:3px;background-color:var(--brand);margin:0 0 24px"></div><div style="color:#333;font-size:16px;line-height:1.7;font-family:var(--font-body, Roboto, sans-serif)"></div></div></section>
+<section style="padding:40px 10%;background-color:transparent"><style>
+        .cm-cols-1 { display: grid; grid-template-columns: repeat(1, 1fr); gap: 0px; max-width: 1140px; margin: 0 auto; text-align: left; }
+        .cm-cols-1 > [class*="DropZone"] { display: contents; }
+        @media (max-width: 640px) { .cm-cols-1 { grid-template-columns: 1fr; max-width: 100%; } }
+      </style><div class="cm-cols-1" data-atoll-col-sizes="(max-width: 1425px) 80vw, 1140px"><div><style>.cm-col-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>Invite AS Data Processing Agreement</strong></p>
+<p>Last Modified: 03.09.2020</p>
+<p>This Invite AS Data Processing Agreement (“<strong>DPA</strong>”), that includes the Standard Contractual Clauses adopted by the European Commission, as applicable, reflects the parties’ agreement with respect to the terms governing the Processing of Personal Data under the Invite AS Customer Terms of Service (the “<strong>Agreement</strong>”). This DPA is an amendment to the Agreement and is effective upon its incorporation into the Agreement, which incorporation may be specified in the Agreement, an Order or an executed amendment to the Agreement. Upon its incorporation into the Agreement, the DPA will form a part of the Agreement.</p>
+<p>The term of this DPA shall follow the term of the Agreement. Terms not otherwise defined herein shall have the meaning as set forth in the Agreement.</p>
+<p><strong>THIS DPA INCLUDES:</strong></p>
+<p>(i) Standard Contractual Clauses, attached hereto as <strong>EXHIBIT 1</strong>.</p>
+<p>(a) <strong>Appendix 1</strong> to the Standard Contractual Clauses, which includes specifics on the Personal Data transferred by the data exporter to the data importer.</p>
+<p>(b) <strong>Appendix 2</strong> to the Standard Contractual Clauses, which includes a description of the technical and organizational security measures implemented by the data importer as referenced.</p>
+<p>(ii) List of Sub-Processors, attached hereto as <strong>EXHIBIT 2</strong>.</p>
+<ul>
+<li><strong>Definitions</strong></li>
+</ul>
+<p>“<strong>Applications</strong>” means the system platforms that Invite AS provides to our customer for usage. That is also including any free services we might provide. Pr 23.05.2018, the two applications Invite AS are offering are CupManager and Superinvite, also including any API between the two applications.</p>
+<p>“<strong>Controller</strong>” means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the Processing of Personal Data.</p>
+<p><strong>“Customer”</strong> – Customer are the legal entity or person who are using the applications for the purpose of the handling the event or registration process. The Customer is not the end-person paying for any event.</p>
+<p>“<strong>Data Protection Law</strong>” means all applicable legislation relating to data protection and privacy including without limitation the EU Data Protection Directive 95/46/EC and all local laws and regulations which amend or replace any of them, including the GDPR, together with any national implementing laws in any Member State of the European Union or, to the extent applicable, in any other country, as amended, repealed, consolidated or replaced from time to time. The terms “process”, “processes” and “processed” will be construed accordingly.</p>
+<p>“<strong>Data Subject</strong>” means the individual to whom Personal Data relates.</p>
+<p>“<strong>GDPR</strong>” means the General Data Protection Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data.</p>
+<p>“<strong>Instruction</strong>” means the written, documented instruction, issued by Controller to Processor, and directing the same to perform a specific action with regard to Personal Data (including, but not limited to, depersonalizing, blocking, deletion, making available).</p>
+<p>“<strong>Personal Data</strong>” means any information relating to an identified or identifiable individual where such information is contained within Customer Data and is protected similarly as personal data or personally identifiable information under applicable Data Protection Law</p>
+<p>“<strong>Personal Data Breach</strong>” means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Personal Data transmitted, stored or otherwise processed.</p>
+<p>“<strong>Processing</strong>” means any operation or set of operations which is performed on Personal Data, encompassing the collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction or erasure of Personal Data.</p>
+<p>“<strong>Processor</strong>” means a natural or legal person, public authority, agency or other body which processes Personal Data on behalf of the Controller.</p>
+<p>**“Standard Contractual Clauses” **means the clauses attached hereto as Exhibit 1 pursuant to the European Commission’s decision (C(2010)593) of 5 February 2010 on Standard Contractual Clauses for the transfer of personal data to processors established in third countries which do not ensure an adequate level of data protection.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>2. Details of the Processing</strong></p>
+<p>a. Categories of Data Subjects. Controller’s members and other end users including Controller’s customers and participants in events organized by the Controller. Data Subjects also include individuals attempting to communicate with or transfer Personal Data to the Controller’s end users. You as the Customer of Invite AS.</p>
+<p>b. Types of Personal Data. Participant / customer information needed for the Controller to be able to execute the event, to the extent of which is determined and controlled by the Customer in its sole discretion. Purchase information, participation information, event result and statistics information. Special categories of personal information, like information about disability situations for the participant, for the Controller to handle the circumstances in a correct and respectful way. Data placed on social media and third part social media. Other electronic data submitted, stored, sent, or received by end users via Invite AS Applications. We also collect information about our relationship with you as our customer, such as contact information, support logs, and other data we need to provide a satisfying support level.</p>
+<p>c. Subject-Matter and Nature of the Processing. The subject-matter of Processing of Personal Data by Processor is the provision of the services to the Controller that involves the Processing of Personal Data. Personal Data will be subject to those Processing activities as may be specified in the Agreement.</p>
+<p>d. Purpose of the Processing. Personal Data will be Processed for purposes of providing the services trough Invite AS Applications set out and otherwise agreed to in the Agreement.</p>
+<p>e. Duration of the Processing. Personal Data will be Processed for the duration of the Agreement, subject to Section 4 of this DPA.</p>
+<p><strong>3.</strong> <strong>Customer Responsibility</strong></p>
+<p>Within the scope of the Agreement and in its use of the services, Controller shall be solely responsible for complying with the statutory requirements relating to data protection and privacy, in particular regarding the disclosure and transfer of Personal Data to the Processor and the Processing of Personal Data. For the avoidance of doubt, Controller’s instructions for the Processing of Personal Data shall comply with the Data Protection Law. This DPA is Customer’s complete and final instruction to Invite AS in relation to Personal Data and that additional instructions outside the scope of DPA would require prior written agreement between the parties. Instructions shall initially be specified in the Agreement and may, from time to time thereafter, be amended, amplified or replaced by Controller in separate written instructions (as individual instructions).</p>
+<p>Controller shall inform Processor without undue delay and comprehensively about any errors or irregularities related to statutory provisions on the Processing of Personal Data.</p>
+<p><strong>4. Obligations of Processor</strong></p>
+<p>a. Compliance with Instructions. The parties acknowledge and agree that Customer is the Controller of Personal Data and Invite AS is the Processor of that data. Processor shall collect, process and use Personal Data only within the scope of Controller’s Instructions. If the Processor believes that an Instruction of the Controller infringes the Data Protection Law, it shall immediately inform the Controller without delay. If Processor cannot process Personal Data in accordance with the Instructions due to a legal requirement under any applicable European Union or Member State law, Processor will (i) promptly notify the Controller of that legal requirement before the relevant Processing to the extent permitted by the Data Protection Law; and (ii) cease all Processing (other than merely storing and maintaining the security of the affected Personal Data) until such time as the Controller issues new instructions with which Processor is able to comply. If this provision is invoked, Processor will not be liable to the Controller under the Agreement for any failure to perform the applicable services until such time as the Controller issues new instructions in regard to the Processing.</p>
+<p>b. Security.Processor shall take the appropriate technical and organizational measures to adequately protect Personal Data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to Personal Data, described under Appendix 2 to the Standard Contractual Clauses. Such measures include, but are not be limited to:</p>
+<p>i. the prevention of unauthorized persons from gaining access to Personal Data Processing systems (physical access control),</p>
+<p>ii. the prevention of Personal Data Processing systems from being used without authorization (logical access control),</p>
+<p>iii. ensuring that persons entitled to use a Personal Data Processing system gain access only to such Personal Data as they are entitled to accessing in accordance with their access rights, and that, in the course of Processing or use and after storage, Personal Data cannot be read, copied, modified or deleted without authorization (data access control),</p>
+<p>iv. ensuring that Personal Data cannot be read, copied, modified or deleted without authorization during electronic transmission, transport or storage on storage media, and that the target entities for any transfer of Personal Data by means of data transmission facilities can be established and verified (data transfer control),</p>
+<p>v. ensuring the establishment of an audit trail to document whether and by whom Personal Data have been entered into, modified in, or removed from Personal Data Processing systems (entry control),</p>
+<p>vi. ensuring that Personal Data is Processed solely in accordance with the Instructions (control of instructions),</p>
+<p>vii. ensuring that Personal Data is protected against accidental destruction or loss (availability control).</p>
+<p>Upon Controller’s request, Processor shall provide a current Personal Data protection and security program relating to the Processing hereunder.</p>
+<p>Processor will facilitate Controller’s compliance with the Controller’s obligation to implement security measures with respect to Personal Data (including if applicable Controller’s obligations pursuant to Articles 32 to 34 (inclusive) of the GDPR), by (i) implementing and maintaining the security measures described under Appendix 2, (ii) complying with the terms of Section 4.4 (Personal Data Breaches); and (iii) providing the Controller with information in relation to the Processing in accordance with Section 5 (Audits).</p>
+<p>c. Confidentiality.  Processor shall ensure that any personnel whom Processor authorizes to process Personal Data on its behalf is subject to confidentiality obligations with respect to that Personal Data. The undertaking to confidentiality shall continue after the termination of the above-entitled activities.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>d. Personal Data Breaches. Processor will notify the Controller as soon as practicable after it becomes aware of any of any Personal Data Breach affecting any Personal Data. At the Controller’s request, Processor will promptly provide the Controller with all reasonable assistance necessary to enable the Controller to notify relevant Personal Data Breaches to competent authorities and/or affected Data Subjects, if Controller is required to do so under the Data Protection Law.</p>
+<p>e. Data Subject Requests. Processor will provide reasonable assistance, including by appropriate technical and organizational measures and taking into account the nature of the Processing, to enable Controller to respond to any request from Data Subjects seeking to exercise their rights under the Data Protection Law with respect to Personal Data (including access, rectification, restriction, deletion or portability of Personal Data, as applicable), to the extent permitted by the law.  If such request is made directly to Processor, Processor will promptly inform Controller and will advise Data Subjects to submit their request to the Controller. Controller shall be solely responsible for responding to any Data Subjects’ requests. Controller shall reimburse Processor for the costs arising from this assistance.</p>
+<p>f.Sub-Processors. Processor shall be entitled to engage sub-Processors to fulfil Processor’s obligations defined in the Agreement only with Controller’s written consent.  For these purposes, Controller consents to the engagement as sub-Processors of Processor’s affiliated companies and the third parties listed in Exhibit 2. For the avoidance of doubt, the above authorization constitutes Controller’s prior written consent to the sub-Processing by Processor for purposes of Clause 11 of the Standard Contractual Clauses.</p>
+<p>If the Processor intends to instruct sub-Processors other than the companies listed in Exhibit 2, the Processor will notify the Controller thereof in writing (email to the email address(es) on record in Processor’s account information for Controller is sufficient) and will give the Controller the opportunity to object to the engagement of the new sub-Processors within 30 days after being notified. The objection must be based on reasonable grounds (e.g. if the Controller proves that significant risks for the protection of its Personal Data exist at the sub-Processor). If the Processor and Controller are unable to resolve such objection, either party may terminate the Agreement by providing written notice to the other party. Controller shall receive a refund of any prepaid but unused fees for the period following the effective date of termination.</p>
+<p>Where Processor engages sub-Processors, Processor will enter into a contract with the sub-Processor that imposes on the sub-Processor the same obligations that apply to Processor under this DPA. Where the sub-Processor fails to fulfil its data protection obligations, Processor will remain liable to the Controller for the performance of such sub-Processors obligations.</p>
+<p>Where a sub-Processor is engaged, the Controller must be granted the right to monitor and inspect the sub-Processor’s activities in accordance with this DPA and the Data Protection Law, including to obtain information from the Processor, upon written request, on the substance of the contract and the implementation of the data protection obligations under the sub-Processing contract, where necessary by inspecting the relevant contract documents.</p>
+<p>The provisions of this Section 4.6 shall mutually apply if the Processor engages a sub-Processor in a country outside the European Economic Area (“EEA”) not recognized by the European Commission as providing an adequate level of protection for personal data.  If, in the performance of this DPA, Invite AS transfers any Personal Data to a sub-processor located outside of the EEA, Invite AS shall, in advance of any such transfer, ensure that a legal mechanism to achieve adequacy in respect of that processing is in place.</p>
+<p>g.  Data Transfers. Controller acknowledges and agrees that, in connection with the performance of the services under the Agreement, Personal Data will be transferred to Invite AS in the EU region. Invite AS, has certified to the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks in order to implement appropriate safeguards for such transfers pursuant to Article 46 of the GDPR. The Standard Contractual Clauses at Exhibit 1 will apply with respect to Personal Data that is transferred outside the EEA, either directly or via onward transfer, to any country not recognized by the European Commission as providing an adequate level of protection for personal data (as described in the Data Protection Law).</p>
+<p>h. Deletion or Retrieval of Personal Data. Other than to the extent required to comply with Data Protection Law, following termination or expiry of the Agreement, Processor will delete all Personal Data (including copies thereof) processed pursuant to this DPA. If Processor is unable to delete Personal Data for technical or other reasons, Processor will apply measures to ensure that Personal Data is blocked from any further Processing.</p>
+<p>Controller shall, upon termination or expiration of the Agreement and by way of issuing an Instruction, stipulate, within a period of time set by Processor, the reasonable measures to return data or to delete stored data. Any additional cost arising in connection with the return or deletion of Personal Data after the termination or expiration of the Agreement shall be borne by Controller.</p>
+<p><strong>5. Audits</strong></p>
+<p>Controller may, prior to the commencement of Processing, and at regular intervals thereafter, audit the technical and organizational measures taken by Processor.</p>
+<p>For such purpose, Controller may, e.g.,</p>
+<ul>
+<li>obtain information from the Processor,</li>
+<li>request Processor to submit to Controller an existing attestation or certificate by an independent professional expert, or</li>
+<li>upon reasonable and timely advance agreement, during regular business hours and without interrupting Processor’s business operations, conduct an on-site inspection of Processor’s business operations or have the same conducted by a qualified third party which shall not be a competitor of Processor.</li>
+</ul>
+<p>Processor shall, upon Controller’s written request and within a reasonable period of time, provide Controller with all information necessary for such audit, to the extent that such information is within Processor’s control and Processor is not precluded from disclosing it by applicable law, a duty of confidentiality, or any other obligation owed to a third party.</p>
+<p><strong>6. General Provisions</strong></p>
+<p>With respect to updates and changes to this DPA, the terms that apply in the “Amendment; No Waiver” section of “Miscellaneous” in the Agreement shall apply.</p>
+<p>In case of any conflict, this DPA shall take precedence over the regulations of the Agreement. Where individual provisions of this DPA are invalid or unenforceable, the validity and enforceability of the other provisions of this DPA shall not be affected.</p>
+<p>Upon the incorporation of this DPA into the Agreement, the parties indicated in Section 7 below (Parties to this DPA) are agreeing to the Standard Contractual Clauses (where and as applicable) and all appendixes attached thereto. In the event of any conflict or inconsistency between this DPA and the Standard Contractual Clauses in Exhibit 1, the Standard Contractual Clauses shall prevail.</p>
+<p>Effective 25 May 2018 Invite AS will process Personal Data in accordance with the GDPR requirements contained herein which are directly applicable to Invite AS’s provision of the Applications.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>7. Parties to this DPA</strong></p>
+<p>This DPA is an amendment to and forms part of the Agreement.  Upon the incorporation of this DPA into the Agreement (i) Controller and the Invite AS entity that are each a party to the Agreement are also each a party to this DPA, and (ii) to the extent that Invite AS  is not the party to the Agreement, Invite AS,  is a party to this DPA, but only with respect to agreement to the Standard Contractual Clauses of the DPA, this Section 7 of the DPA, and to the Standard Contractual Clauses themselves.</p>
+<p><em>If Invite AS,  is not a party to the Agreement, the section of the Agreement entitled ‘Limitation of Liability’ shall apply as between Controller and Invite AS, and in such respect any references to ‘Invite AS’, ‘we’, ‘us’ or ‘our’ shall include both Invite AS, and the Invite AS entity that is a party to the Agreement.</em></p>
+<p>The legal entity agreeing to this DPA as Controller represents that it is authorized to agree to and enter into this DPA for and is agreeing to this DPA solely on behalf of, the Controller.</p>
+<p><strong>EXHIBIT 1</strong></p>
+<p><strong>Standard Contractual Clauses (Processors)</strong></p>
+<p>For the purposes of Article 26(2) of Directive 95/46/EC for the transfer of personal data to processors established in third countries which do not ensure an adequate level of data protection,</p>
+<p>**The Customer, as defined in the Invite AS Customer Terms of Service **(the “data exporter”)</p>
+<p>And</p>
+<p>**Invite AS, Hovinveien 43 B Oslo **(the “data importer”),</p>
+<p>each a ‘party’; together ‘the parties’,</p>
+<p>HAVE AGREED on the following Contractual Clauses (the Clauses) in order to adduce adequate safeguards with respect to the protection of privacy and fundamental rights and freedoms of individuals for the transfer by the data exporter to the data importer of the personal data specified in Appendix 1.</p>
+<p><strong>Clause 1</strong></p>
+<p><strong>Definitions</strong></p>
+<p>For the purposes of the Clauses:</p>
+<p>(a) ‘personal data’, ‘special categories of data’, ‘process/processing’, ‘controller’, ‘processor’, ‘data subject’ and ‘supervisory authority’ shall have the same meaning as in Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the protection of individuals with regard to the processing of personal data and on the free movement of such data;</p>
+<p>(b) ‘the data exporter’ means the controller who transfers the personal data;</p>
+<p>(c) ‘the data importer’ means the processor who agrees to receive from the data exporter personal data intended for processing on his behalf after the transfer in accordance with his instructions and the terms of the Clauses and who is not subject to a third country’s system ensuring adequate protection within the meaning of Article 25(1) of Directive 95/46/EC;</p>
+<p>(d) ‘the subprocessor’ means any processor engaged by the data importer or by any other subprocessor of the data importer who agrees to receive from the data importer or from any other subprocessor of the data importer personal data exclusively intended for processing activities to be carried out on behalf of the data exporter after the transfer in accordance with his instructions, the terms of the Clauses and the terms of the written subcontract;</p>
+<p>(e) ‘the applicable data protection law’ means the legislation protecting the fundamental rights and freedoms of individuals and, in particular, their right to privacy with respect to the processing of personal data applicable to a data controller in the Member State in which the data exporter is established;</p>
+<p>(f) ‘technical and organizational security measures’ means those measures aimed at protecting personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorized disclosure or access, in particular where the processing involves the transmission of data over a network, and against all other unlawful forms of processing.</p>
+<p><strong>Clause 2</strong></p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>Details of the transfer</strong></p>
+<p>The details of the transfer and in particular the special categories of personal data where applicable are specified in Appendix 1 which forms an integral part of the Clauses.</p>
+<p><strong>Clause 3</strong></p>
+<p><strong>Third-party beneficiary clause</strong></p>
+<ul>
+<li>The data subject can enforce against the data exporter this Clause, Clause 4(b) to (i), Clause 5(a) to (e), and (g) to (j), Clause 6(1) and (2), Clause 7, Clause 8(2), and Clauses 9 to 12 as third-party beneficiary.</li>
+<li>The data subject can enforce against the data importer this Clause, Clause 5(a) to (e) and (g), Clause 6, Clause 7, Clause 8(2), and Clauses 9 to 12, in cases where the data exporter has factually disappeared or has ceased to exist in law unless any successor entity has assumed the entire legal obligations of the data exporter by contract or by operation of law, as a result of which it takes on the rights and obligations of the data exporter, in which case the data subject can enforce them against such entity.</li>
+<li>The data subject can enforce against the subprocessor this Clause, Clause 5(a) to (e) and (g), Clause 6, Clause 7, Clause 8(2), and Clauses 9 to 12, in cases where both the data exporter and the data importer have factually disappeared or ceased to exist in law or have become insolvent, unless any successor entity has assumed the entire legal obligations of the data exporter by contract or by operation of law as a result of which it takes on the rights and obligations of the data exporter, in which case the data subject can enforce them against such entity. Such third-party liability of the subprocessor shall be limited to its own processing operations under the Clauses.</li>
+<li>The parties do not object to a data subject being represented by an association or other body if the data subject so expressly wishes and if permitted by national law.</li>
+</ul>
+<p><strong>Clause 4</strong></p>
+<p><strong>Obligations of the data exporter</strong></p>
+<p>The data exporter agrees and warrants:</p>
+<p>(a) that the processing, including the transfer itself, of the personal data has been and will continue to be carried out in accordance with the relevant provisions of the applicable data protection law (and, where applicable, has been notified to the relevant authorities of the Member State where the data exporter is established) and does not violate the relevant provisions of that State;</p>
+<p>(b) that it has instructed and throughout the duration of the personal data-processing services will instruct the data importer to process the personal data transferred only on the data exporter’s behalf and in accordance with the applicable data protection law and the Clauses;</p>
+<p>(c) that the data importer will provide sufficient guarantees in respect of the technical and organizational security measures specified in Appendix 2 to this contract;</p>
+<p>(d) that after assessment of the requirements of the applicable data protection law, the security measures are appropriate to protect personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorized disclosure or access, in particular where the processing involves the transmission of data over a network, and against all other unlawful forms of processing, and that these measures ensure a level of security appropriate to the risks presented by the processing and the nature of the data to be protected having regard to the state of the art and the cost of their implementation;</p>
+<p>(e) that it will ensure compliance with the security measures;</p>
+<p>(f) that, if the transfer involves special categories of data, the data subject has been informed or will be informed before, or as soon as possible after, the transfer that its data could be transmitted to a third country not providing adequate protection within the meaning of Directive 95/46/EC;</p>
+<p>(g) to forward any notification received from the data importer or any subprocessor pursuant to Clause 5(b) and Clause 8(3) to the data protection supervisory authority if the data exporter decides to continue the transfer or to lift the suspension;</p>
+<p>(h) to make available to the data subjects upon request a copy of the Clauses, with the exception of Appendix 2, and a summary description of the security measures, as well as a copy of any contract for subprocessing services which has to be made in accordance with the Clauses, unless the Clauses or the contract contain commercial information, in which case it may remove such commercial information;</p>
+<p>(i) that, in the event of subprocessing, the processing activity is carried out in accordance with Clause 11 by a subprocessor providing at least the same level of protection for the personal data and the rights of data subject as the data importer under the Clauses; and</p>
+<p>(j) that it will ensure compliance with Clause 4(a) to (i).</p>
+<p><strong>Clause 5</strong></p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>Obligations of the data importer</strong></p>
+<p>The data importer agrees and warrants:</p>
+<p>(a) to process the personal data only on behalf of the data exporter and in compliance with its instructions and the Clauses; if it cannot provide such compliance for whatever reasons, it agrees to inform promptly the data exporter of its inability to comply, in which case the data exporter is entitled to suspend the transfer of data and/or terminate the contract;</p>
+<p>(b) that it has no reason to believe that the legislation applicable to it prevents it from fulfilling the instructions received from the data exporter and its obligations under the contract and that in the event of a change in this legislation which is likely to have a substantial adverse effect on the warranties and obligations provided by the Clauses, it will promptly notify the change to the data exporter as soon as it is aware, in which case the data exporter is entitled to suspend the transfer of data and/or terminate the contract;</p>
+<p>(c) that it has implemented the technical and organizational security measures specified in Appendix 2 before processing the personal data transferred;</p>
+<p>(d) that it will promptly notify the data exporter about:</p>
+<p>(i) any legally binding request for disclosure of the personal data by a law enforcement authority unless otherwise prohibited, such as a prohibition under criminal law to preserve the confidentiality of a law enforcement investigation;</p>
+<p>(ii) any accidental or unauthorized access; and</p>
+<p>(iii) any request received directly from the data subjects without responding to that request, unless it has been otherwise authorized to do so;</p>
+<p>(e) to deal promptly and properly with all inquiries from the data exporter relating to its processing of the personal data subject to the transfer and to abide by the advice of the supervisory authority with regard to the processing of the data transferred;</p>
+<p>(f) at the request of the data exporter to submit its data-processing facilities for audit of the processing activities covered by the Clauses which shall be carried out by the data exporter or an inspection body composed of independent members and in possession of the required professional qualifications bound by a duty of confidentiality, selected by the data exporter, where applicable, in agreement with the supervisory authority;</p>
+<p>(g) to make available to the data subject upon request a copy of the Clauses, or any existing contract for subprocessing, unless the Clauses or contract contain commercial information, in which case it may remove such commercial information, with the exception of Appendix 2 which shall be replaced by a summary description of the security measures in those cases where the data subject is unable to obtain a copy from the data exporter;</p>
+<p>(h) that, in the event of sub processing, it has previously informed the data exporter and obtained its prior written consent;</p>
+<p>(i) that the processing services by the sub processor will be carried out in accordance with Clause 11;</p>
+<p>(j) to send promptly a copy of any sub processor agreement it concludes under the Clauses to the data exporter.</p>
+<p><strong>Clause 6</strong></p>
+<p><strong>Liability</strong></p>
+<ul>
+<li>The parties agree that any data subject, who has suffered damage as a result of any breach of the obligations referred to in Clause 3 or in Clause 11 by any party or subprocessor is entitled to receive compensation from the data exporter for the damage suffered.</li>
+<li>If a data subject is not able to bring a claim for compensation in accordance with paragraph 1 against the data exporter, arising out of a breach by the data importer or his subprocessor of any of their obligations referred to in Clause 3 or in Clause 11, because the data exporter has factually disappeared or ceased to exist in law or has become insolvent, the data importer agrees that the data subject may issue a claim against the data importer as if it were the data exporter, unless any successor entity has assumed the entire legal obligations of the data exporter by contract of by operation of law, in which case the data subject can enforce its rights against such entity.
+The data importer may not rely on a breach by a subprocessor of its obligations in order to avoid its own liabilities.</li>
+<li>If a data subject is not able to bring a claim against the data exporter or the data importer referred to in paragraphs 1 and 2, arising out of a breach by the subprocessor of any of their obligations referred to in Clause 3 or in Clause 11 because both the data exporter and the data importer have factually disappeared or ceased to exist in law or have become insolvent, the subprocessor agrees that the data subject may issue a claim against the data subprocessor with regard to its own processing operations under the Clauses as if it were the data exporter or the data importer, unless any successor entity has assumed the entire legal obligations of the data exporter or data importer by contract or by operation of law, in which case the data subject can enforce its rights against such entity. The liability of the subprocessor shall be limited to its own processing operations under the Clauses.</li>
+</ul>
+<p><strong>Clause 7</strong></p>
+<p><strong>Mediation and jurisdiction</strong></p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><ol>
+<li>The data importer agrees that if the data subject invokes against it third-party beneficiary rights and/or claims compensation for damages under the Clauses, the data importer will accept the decision of the data subject:</li>
+</ol>
+<p>(a) to refer the dispute to mediation, by an independent person or, where applicable, by the supervisory authority;</p>
+<p>(b) to refer the dispute to the courts in the Member State in which the data exporter is established.</p>
+<ol start="2">
+<li>The parties agree that the choice made by the data subject will not prejudice its substantive or procedural rights to seek remedies in accordance with other provisions of national or international law.</li>
+</ol>
+<p><strong>Clause 8</strong></p>
+<p><strong>Cooperation with supervisory authorities</strong></p>
+<ul>
+<li>The data exporter agrees to deposit a copy of this contract with the supervisory authority if it so requests or if such deposit is required under the applicable data protection law.</li>
+<li>The parties agree that the supervisory authority has the right to conduct an audit of the data importer, and of any subprocessor, which has the same scope and is subject to the same conditions as would apply to an audit of the data exporter under the applicable data protection law.</li>
+<li>The data importer shall promptly inform the data exporter about the existence of legislation applicable to it or any subprocessor preventing the conduct of an audit of the data importer, or any subprocessor, pursuant to paragraph 2. In such a case the data exporter shall be entitled to take the measures foreseen in Clause 5(b).</li>
+</ul>
+<p><strong>Clause 9</strong></p>
+<p><strong>Governing law</strong></p>
+<p>The Clauses shall be governed by the law of the Member State in which the data exporter is established.</p>
+<p><strong>Clause 10</strong></p>
+<p><strong>Variation of the contract</strong></p>
+<p>The parties undertake not to vary or modify the Clauses. This does not preclude the parties from adding clauses on business related issues where required as long as they do not contradict the Clause.</p>
+<p><strong>Clause 11</strong></p>
+<p><strong>Subprocessing</strong></p>
+<ul>
+<li>The data importer shall not subcontract any of its processing operations performed on behalf of the data exporter under the Clauses without the prior written consent of the data exporter. Where the data importer subcontracts its obligations under the Clauses, with the consent of the data exporter, it shall do so only by way of a written agreement with the subprocessor which imposes the same obligations on the subprocessor as are imposed on the data importer under the Clauses. Where the subprocessor fails to fulfil its data protection obligations under such written agreement the data importer shall remain fully liable to the data exporter for the performance of the subprocessor’s obligations under such agreement.</li>
+<li>The prior written contract between the data importer and the subprocessor shall also provide for a third-party beneficiary clause as laid down in Clause 3 for cases where the data subject is not able to bring the claim for compensation referred to in paragraph 1 of Clause 6 against the data exporter or the data importer because they have factually disappeared or have ceased to exist in law or have become insolvent and no successor entity has assumed the entire legal obligations of the data exporter or data importer by contract or by operation of law. Such third-party liability of the subprocessor shall be limited to its own processing operations under the Clauses.</li>
+<li>The provisions relating to data protection aspects for subprocessing of the contract referred to in paragraph 1 shall be governed by the law of the Member State in which the data exporter is established.</li>
+<li>The data exporter shall keep a list of subprocessing agreements concluded under the Clauses and notified by the data importer pursuant to Clause 5(j), which shall be updated at least once a year. The list shall be available to the data exporter’s data protection supervisory authority.</li>
+</ul>
+<p><strong>Clause 12</strong></p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>Obligation after the termination of personal data-processing services</strong></p>
+<ul>
+<li>The parties agree that on the termination of the provision of data-processing services, the data importer and the subprocessor shall, at the choice of the data exporter, return all the personal data transferred and the copies thereof to the data exporter or shall destroy all the personal data and certify to the data exporter that it has done so, unless legislation imposed upon the data importer prevents it from returning or destroying all or part of the personal data transferred. In that case, the data importer warrants that it will guarantee the confidentiality of the personal data transferred and will not actively process the personal data transferred anymore.</li>
+<li>The data importer and the subprocessor warrant that upon request of the data exporter and/or of the supervisory authority, it will submit its data-processing facilities for an audit of the measures referred to in paragraph 1.</li>
+</ul>
+<p><strong>APPENDIX 1 to the Standard Contractual Clauses</strong></p>
+<p>This Appendix forms part of the Clauses. The Member States may complete or specify, according to their national procedures, any additional necessary information to be contained in this Appendix.</p>
+<p><strong>A. Data exporter</strong></p>
+<p>The data exporter is the Customer, as defined in the Invite AS Customer Terms of Service (“<strong>Agreement</strong>”).</p>
+<p><strong>B. Data importer</strong></p>
+<p>The data importer is Invite AS, a global provider of event registration and payment, that also include tournament administration.</p>
+<p><strong>C. Data subjects</strong></p>
+<p>Categories of data subjects set out under Section 2 of the Data Processing Agreement to which the Clauses are attached.</p>
+<p><strong>D. Categories of data</strong></p>
+<p>Categories of personal data set out under Section 2 of the Data Processing Agreement to which the Clauses are attached.</p>
+<p><strong>E. Special categories of data (if appropriate)</strong></p>
+<p>The parties do not anticipate the transfer of special categories of data.</p>
+<p><strong>F. Processing operations</strong></p>
+<p>The processing activities set out under Section 2 of the Data Processing Agreement to which the Clauses are attached:</p>
+<p><strong>Appendix 2 to the Standard Contractual Clauses</strong></p>
+<p>This Appendix forms part of the Clauses.</p>
+<p>Description of the technical and organizational security measures implemented by the data importer in accordance with Clauses 4(d) and 5(c) (or document/legislation attached):</p>
+<p>Invite AS currently observes the security practices described in this Appendix 2. Notwithstanding any provision to the contrary otherwise agreed to by data exporter, Invite AS may modify or update these practices at its discretion provided that such modification and update does not result in a material degradation in the protection offered by these practices. All capitalized terms not otherwise defined herein shall have the meanings as set forth in the Agreement.</p>
+<p><strong>a)Access Control</strong></p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>i)      Preventing Unauthorized Product Access</p>
+<p>Outsourced processing: Invite AS hosts its Applications with outsourced recourses. Additionally, Invite AS maintains contractual relationships with vendors in order to provide the Service in accordance with our Data Processing Agreement. Invite AS relies on contractual agreements, privacy policies, and vendor compliance programs in order to protect data processed or stored by these vendors.</p>
+<p>Physical and environmental security: Invite AS hosts its product infrastructure with multi-tenant, outsourced infrastructure providers. Most of the physical and environmental security controls are audited for ISO/IEC 27001 compliance, among other certifications.</p>
+<p>Authentication: Invite AS implemented a uniform password policy for its customer products. Customers who interact with the products via the user interface must authenticate before accessing non-public customer data.</p>
+<p>Authorization: Customer data is stored in multi-tenant storage systems accessible to Customers via only application user interfaces and application programming interfaces. Customers are not allowed direct access to the underlying application infrastructure. The authorization model in each of Invite AS’s products is designed to ensure that only the appropriately assigned individuals can access relevant features, views, and customization options. Authorization to data sets is performed through validating the user’s permissions against the attributes associated with each data set.</p>
+<p>Application Programming Interface (API) access: Public product APIs may be accessed using an API key.</p>
+<p>ii)     Preventing Unauthorized Product Use</p>
+<p>Invite AS implements industry standard access controls and detection capabilities for the internal networks that support its products.</p>
+<p>Access controls: Network access control mechanisms are designed to prevent network traffic using unauthorized protocols from reaching the product infrastructure. The technical measures implemented differ between infrastructure providers and include Virtual Private Cloud (VPC) implementations, security group assignment, and traditional firewall rules.</p>
+<p>Static code analysis: Security reviews of code stored in Invite AS’s source code repositories is performed, checking for coding best practices and identifiable software flaws.</p>
+<p>iii)    Limitations of Privilege &amp; Authorization Requirements</p>
+<p>Product access: A subset of Invite AS’s employees have access to the products and to customer data via controlled interfaces. The intent of providing access to a subset of employees is to provide effective customer support, to troubleshoot potential problems, to detect and respond to security incidents and implement data security. Access is enabled through “just in time” requests for access; all such requests are logged. Employees are granted access by role, and reviews of high risk privilege grants are initiated daily. Employee roles are reviewed at least once every six months.</p>
+<p>Background checks: All Invite AS employees undergo a third-party background check prior to being extended an employment offer, in accordance with the applicable laws. All employees are required to conduct themselves in a manner consistent with company guidelines, non-disclosure requirements, and ethical standards.</p>
+<p><strong>b) Transmission Control</strong></p>
+<p>In-transit: Invite AS makes HTTPS encryption (also referred to as SSL or TLS) available on every one of its login interfaces and for free on every customer site hosted on the Invite AS products. Invite AS’s HTTPS implementation uses industry standard algorithms and certificates.</p>
+<p><strong>c) Input Control</strong></p>
+<p>Detection: Invite AS designed its infrastructure to log extensive information about the system behavior, traffic received, system authentication, and other application requests. Internal systems aggregated log data and alert appropriate employees of malicious, unintended, or anomalous activities. Invite AS personnel, including security, operations, and support personnel, are responsive to known incidents.</p>
+<p>Response and tracking: Invite AS maintains a record of known security incidents that includes description, dates and times of relevant activities, and incident disposition. Suspected and confirmed security incidents are investigated by security, operations, or support personnel; and appropriate resolution steps are identified and documented. For any confirmed incidents, Invite AS will take appropriate steps to minimize product and Customer damage or unauthorized disclosure.</p>
+<p>Communication: If Invite AS becomes aware of unlawful access to Customer data stored within its products, Invite AS will: 1) notify the affected Customers of the incident; 2) provide a description of the steps Invite AS is taking to resolve the incident; and 3) provide status updates to the Customer contact, as Invite AS deems necessary. Notification(s) of incidents, if any, will be delivered to one or more of the Customer’s contacts in a form Invite AS selects, which may include via email or telephone.</p>
+<p><strong>d) Availability Control</strong></p>
+<p>Infrastructure availability: The infrastructure providers use commercially reasonable efforts to ensure a minimum of 99.95% uptime. The providers maintain a minimum of N+1 redundancy to power, network, and HVAC services.</p>
+<p>Fault tolerance: Backup and replication strategies are designed to ensure redundancy and fail-over protections during a significant processing failure. Customer data is backed up to multiple durable data stores and replicated across multiple availability zones.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Online replicas and backups: Where feasible, production databases are designed to replicate data between no less than 1 primary and 1 secondary database. All databases are backed up and maintained using at least industry standard methods.</p>
+<p>Invite AS’s products are designed to ensure redundancy and seamless failover. The server instances that support the products are also architected with a goal to prevent single points of failure. This design assists Invite AS operations in maintaining and updating the product applications and backend while limiting downtime.</p>
+<p><strong>EXHIBIT 2</strong></p>
+<p>List of Sub-Processors</p>
+<ul>
+<li>Amazon Web Services (From 2019)</li>
+<li>Google</li>
+<li>Intercom</li>
+<li>Mailchimp</li>
+<li>Mailgun</li>
+<li>Productboard</li>
+<li>Prosperworks</li>
+<li>Telavox</li>
+<li>Twilio</li>
+<li>Glesys – (Hosting servises)</li>
+<li>Hetzner (Hosting services)</li>
+<li>Osvath Boros Robert (Developer)</li>
+<li>Szasz-Revai Endre (Infrastructure)</li>
+</ul></div></div></div></section></div></div></section> </main> <footer> <section style="background-color:var(--brand);padding:56px 7%;font-family:var(--font-body, Roboto, sans-serif)"><div style="display:flex;flex-wrap:wrap;gap:48px;max-width:1100px;margin:0 auto"><div style="flex:1 1 420px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:22px;color:#fff;margin:0 0 18px">Vanlige spørsmål</h3><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Hva brukes SuperInvite til?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>SuperInvite er en komplett løsning for alle klubber og foreninger som ønsker en enklere hverdag rundt innbetalinger og medlemshåndtering.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Hvordan komme i gang?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Ta kontakt med oss, så hjelper vi deg i gang. Du kan også <a href="https://calendly.com/havard-3/superinvite-demo">booke en demo</a>.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Hvor finner jeg priser?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Du finner alle priser på <a href="/no/priser/">prissiden vår</a>.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Hvordan fungerer oppgjør i SuperInvite?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Les mer om hvordan oppgjør og økonomi fungerer på <a href="/no/oppgjor-og-okonomi/">siden om oppgjør og økonomi</a>.</p></div></div></details></div><div style="flex:1 1 320px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:22px;color:#fff;margin:0 0 18px">Vil du vite mer?</h3><p style="color:rgba(255,255,255,0.9);font-size:15px;line-height:1.7;margin:0 0 20px">Vi har samlet en side som gir deg full oversikt over hvordan du bruker de viktigste funksjonene i SuperInvite.</p><div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><a href="/no/docs/" style="display:inline-flex;align-items:center;gap:8px;background-color:#fff;color:#1a1a1a;padding:12px 24px;border-radius:3px;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.15)">Gå til SuperInvite hjelpeside<!-- --> <span aria-hidden="true">›</span></a></div></div></div></section>
+<section style="background-color:#f4f4f4;padding:48px 7% 0;font-family:var(--font-body, Roboto, sans-serif)"><style>.cm-footer-mail { color: var(--brand); text-decoration: none; } .cm-footer-mail:hover, .cm-footer-link:hover { text-decoration: underline; }</style><div style="display:flex;flex-wrap:wrap;gap:40px;max-width:1100px;margin:0 auto;padding-bottom:32px"><div style="flex:1 1 260px"><img src="/media/superinvite-logo-Website-1.png" alt="SuperInvite" style="max-height:48px;max-width:220px"/></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Navigasjon</h3><a href="/no/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Hjem</a><a href="/no/kontaktskjema/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Kontaktskjema</a><a href="/no/support/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Support</a><a href="/no/ressurser/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Ressurser</a><a href="/no/priser/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Priser</a><a href="/no/om-superinvite/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Om SuperInvite</a><a href="/no/stillinger/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Stillinger</a></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Vilkår</h3><a href="/no/vilkar-for-deltakere/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Vilkår for deltakere</a></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Kontakt</h3><p style="color:#555;font-size:14px;line-height:1.8;margin:0">Telefon: <!-- -->33 22 12 90<br/>Epost: <a class="cm-footer-mail" href="mailto:support@superinvite.no">support@superinvite.no</a></p></div></div><div style="border-top:1px solid rgba(0,0,0,0.08);padding:20px 0 24px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:10px;align-items:center"><span style="display:flex;gap:18px"><a href="https://www.facebook.com/innbetalinger" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--brand)"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"></path></svg></a><a href="https://www.instagram.com/cupmanager/" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="var(--brand)" stroke="none"></circle></svg></a></span><span style="color:#888;font-size:13px">Copyright 2026 Superinvite.no</span></div></section> </footer> <a id="preview-btn" href="" class="fixed bottom-20 right-6 bg-amber-500 hover:bg-amber-600 text-black px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 transition-colors z-40 font-medium" style="display:none"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path> <circle cx="12" cy="12" r="3"></circle> </svg>
+Preview Changes
+</a> <script type="module" src="/_astro/PreviewButton.astro_astro_type_script_index_0_lang.DJNo2de4.js"></script> </body></html>

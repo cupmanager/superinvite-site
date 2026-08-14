@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /atoll/
+Allow: /
+
+Sitemap: https://www.superinvite.com/sitemap-index.xml
