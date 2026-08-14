@@ -1,0 +1,725 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>News - SuperInvite</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap"><link rel="alternate" hreflang="no" href="https://www.superinvite.com/no/nyheter/"><link rel="alternate" hreflang="sv" href="https://www.superinvite.com/sv/nyheter/"><link rel="alternate" hreflang="en" href="https://www.superinvite.com/en/nyheter/"><link rel="alternate" hreflang="x-default" href="https://www.superinvite.com/no/nyheter/"><link rel="stylesheet" href="/_astro/SiteIcons.CmZCkFoK.css">
+<style>:root{--font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;--font-heading: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;--brand: #41AB34;--brand-ink: #ffffff}.atoll-header{--cm-panel-max-width: none}body{font-family:var(--font-body)}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading)}
+</style></head> <body> <header class="atoll-header"> <a href="/en/" style="display:inline-flex;align-items:center"><img src="/media/superinvite-logo-Website-1.png" alt="SuperInvite" style="height:48px;width:auto;display:block"/></a>
+<nav class="cm-nav"><style>
+  .atoll-header {
+    --atoll-header-max-width: 1300px;
+    --atoll-header-padding-inline: 30px;
+    --atoll-header-padding-block: 0px;
+    --atoll-header-min-height: 100px;
+    --atoll-header-border-width: 0px;
+    --atoll-header-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+</style><style>
+        .cm-nav { display: flex; align-items: center; gap: 30px; font-family: var(--font-body, Roboto, sans-serif); }
+        .cm-nav-toggle { display: none; }
+        .cm-nav-hamburger { display: none; cursor: pointer; padding: 8px; background: none; border: none; color: #333; }
+        .cm-nav-hamburger svg { display: block; }
+        .cm-nav-links { display: contents; }
+        .cm-nav a.cm-nav-link, .cm-nav span.cm-nav-link { color: #5C6B79; font-weight: 400; font-size: 17px; text-decoration: none; transition: color 0.15s; }
+        /* Chevron inherits the link colour, so it greens on hover too */
+        .cm-nav .cm-caret { margin-left: 5px; flex: none; }
+        @media (min-width: 1024px) {
+          /* Nav items span the full header height (as on cupmanager.net), for
+             two reasons: the mega panel is positioned at top:100% of its item,
+             so anything shorter drops it *inside* the header; and it gives the
+             hover target the whole bar rather than just the text. Going
+             inline-flex also stops the chevron inflating the trigger's line
+             box, which would knock it off the centre line of its neighbours. */
+          /* The nav must fill the header before its items can; otherwise
+             stretching them only reaches the nav's own content height. */
+          .cm-nav { align-self: stretch; }
+          .cm-nav > .cm-nav-links > a.cm-nav-link,
+          .cm-nav > .cm-nav-links > .cm-mi-wrap { align-self: stretch; display: inline-flex; align-items: center; }
+          .cm-nav .cm-mi-wrap > a.cm-nav-link,
+          .cm-nav .cm-mi-wrap > span.cm-nav-link { display: inline-flex; align-items: center; height: 100%; }
+        }
+        .cm-nav a.cm-nav-link:hover, .cm-nav .cm-mi-wrap:hover > a.cm-nav-link, .cm-nav .cm-mi-wrap:hover > span.cm-nav-link { color: var(--brand); }
+        .cm-nav span.cm-nav-link { cursor: default; }
+        @media (max-width: 1024px) {
+          .cm-nav .cm-caret { display: none; }
+          .cm-nav-hamburger { display: block; }
+          .cm-nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-bottom: 1px solid #eee; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); z-index: 50; padding: 0 24px 12px; }
+          .cm-nav-links > a, .cm-nav-links .cm-mi-wrap { display: block; padding: 12px 0; border-top: 1px solid #f0f0f0; }
+          .cm-nav-toggle:checked ~ .cm-nav-links { display: flex; }
+        }
+      </style><input type="checkbox" id="cm-nav-toggle" class="cm-nav-toggle" hidden=""/><label for="cm-nav-toggle" class="cm-nav-hamburger" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label><div class="cm-nav-links"><a href="/en/" class="cm-nav-link">Home</a><div class="cm-mi-wrap"><style>
+          /* Deliberately NOT positioned: the panel spans the viewport, so its
+             containing block has to be the header (.atoll-header is relative,
+             from the library's globals) rather than the item. Items stretch to
+             the full header height, so top:100% lands in the same place either
+             way. */
+          .cm-mi-panel { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-top: 1px solid var(--brand); border-bottom: 1px solid var(--brand); z-index: 60; }
+          .cm-mi-wrap:hover > .cm-mi-panel, .cm-mi-wrap:focus-within > .cm-mi-panel { display: block; }
+          /* The two halves meet at the centre of the viewport. Contained keeps
+             them inside the header's content width (cupmanager.net); full lets
+             the colour bleed to the edges (superinvite.com). */
+          .cm-mi-panel-inner { display: flex; max-width: var(--cm-panel-max-width, 1300px); margin: 0 auto; }
+          .cm-mi-panel-highlights { background: var(--brand); flex: 0 0 50%; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; justify-content: center; padding: 44px 20px 44px 27%; }
+          .cm-nav .cm-mi-panel-highlights a.cm-nav-link { color: #fff; font-weight: 400; font-size: 18px; display: inline-flex; align-items: center; gap: 14px; }
+          .cm-mi-panel-highlights svg { width: 20px; height: 20px; flex: none; }
+          .cm-nav .cm-mi-panel-highlights a.cm-nav-link:hover { color: rgba(255,255,255,0.8); }
+          .cm-mi-panel-main { background: #f5f5f5; flex: 0 0 50%; min-width: 0; box-sizing: border-box; padding: 44px 6% 44px 5%; }
+          .cm-mi-panel-heading { font-family: var(--font-heading, Montserrat, sans-serif); font-weight: 600; font-size: 22px; color: #162B40; margin: 0 0 6px; padding-bottom: 14px; border-bottom: 2px solid var(--brand); }
+          /* Multi-column, not grid: the live panels fill the first column
+             before starting the second, and column-count does that for any
+             number of links without the markup naming a row count. */
+          .cm-mi-panel-links { columns: 2; column-gap: 32px; margin-top: 20px; }
+          .cm-nav .cm-mi-panel-links a.cm-nav-link { display: block; break-inside: avoid; margin-bottom: 18px; color: #5C6B79; font-weight: 400; font-size: 15px; }
+          .cm-nav .cm-mi-panel-links a.cm-nav-link:hover { color: var(--brand); }
+          @media (max-width: 1024px) {
+            .cm-mi-panel { display: block; position: static; border: 0; background: transparent; }
+            .cm-mi-panel-inner { display: block; max-width: none; }
+            .cm-mi-panel-highlights { display: none; }
+            .cm-mi-panel-main { background: transparent; padding: 8px 0 0 12px; }
+            .cm-mi-panel-heading { display: none; }
+            .cm-mi-panel-links { columns: 1; margin-top: 4px; }
+            .cm-nav .cm-mi-panel-links a.cm-nav-link { margin-bottom: 10px; }
+          }
+        </style><span class="cm-nav-link" tabindex="0" role="button" aria-haspopup="true">About SuperInvite<svg class="cm-caret" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><div class="cm-mi-panel"><div class="cm-mi-panel-inner"><div class="cm-mi-panel-highlights"><a href="/en/funksjoner-i-superinvite/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>Features</a><a href="/en/nyheter/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>News</a><a href="/en/priser/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"></circle></svg>Pricing</a></div><div class="cm-mi-panel-main"><p class="cm-mi-panel-heading">What would you like to know?</p><div class="cm-mi-panel-links"><a href="/en/fleksibel-losning/" class="cm-nav-link">Flexible payment solution</a><a href="/en/autotrekk-og-delbetaling/" class="cm-nav-link">Installment payments and recurring payments</a><a href="/en/kommunikasjon/" class="cm-nav-link">Communication</a><a href="/en/oppgjor-og-okonomi/" class="cm-nav-link">Settlement and finances</a><a href="/en/lister-og-oversikt/" class="cm-nav-link">Lists and overview</a><a href="/en/deltakere-og-qr-kode/" class="cm-nav-link">Participants and QR codes</a></div></div></div></div></div><a href="/en/support/" class="cm-nav-link">Support</a><a href="/en/ressurser/" class="cm-nav-link">Resources</a><div class="cm-mi-wrap cm-mi-drop"><style>
+          /* Positioned on .cm-mi-drop, never on .cm-mi-wrap: the mega panel
+             spans the window and depends on .cm-mi-wrap staying static so that
+             its containing block is the header. This card is the opposite —
+             it hangs off its own item — so only dropdown items get a
+             containing block, and panel items are left alone. */
+          .cm-mi-drop { position: relative; }
+          /* Measured off superinvite.com: a white card the width of two nav
+             items, separated by the same soft shadow as the header itself. */
+          .cm-mi-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 280px; box-sizing: border-box; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 15px; z-index: 60; }
+          .cm-mi-drop:hover > .cm-mi-menu, .cm-mi-drop:focus-within > .cm-mi-menu { display: block; }
+          /* Tighter than the body line-height, to the live card's 37px rows —
+             the labels are single words and nowrap keeps them so. */
+          .cm-nav .cm-mi-menu a.cm-nav-link { display: block; padding: 10px 8px 8px 10px; font-size: 17px; line-height: 1.1; color: #5C6B79; white-space: nowrap; }
+          .cm-nav .cm-mi-menu a.cm-nav-link:hover { color: var(--brand); }
+          @media (max-width: 1024px) {
+            /* No hovering on a phone: the card unfolds into the hamburger menu
+               as an indented list under its item, as the mega panel does. */
+            .cm-mi-menu { display: block; position: static; min-width: 0; background: transparent; box-shadow: none; padding: 4px 0 0 12px; }
+            .cm-nav .cm-mi-menu a.cm-nav-link { padding: 0; margin-bottom: 10px; }
+          }
+        </style><span class="cm-nav-link" tabindex="0" role="button" aria-haspopup="true">Book a demo<svg class="cm-caret" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><div class="cm-mi-menu"><a href="https://calendly.com/havard-3/superinvite-demo" class="cm-nav-link">Norsk</a><a href="https://calendly.com/jimmy-280/superinvite-demo" class="cm-nav-link">Svenska</a><a href="https://calendly.com/petronella/superinvite-demo" class="cm-nav-link">Dansk</a><a href="https://calendly.com/havard-3/superinvite-demo" class="cm-nav-link">English</a></div></div><a href="https://www.superinvite.no/#/login" style="display:inline-flex;align-items:center;gap:8px;background-color:var(--brand);color:#fff;border-radius:3px;font-family:var(--font-body, Roboto, sans-serif);font-weight:300;text-decoration:none;white-space:nowrap;font-size:16px;padding:10px 30px">Login</a></div><script>(function(){
+        var path = location.pathname.replace(/\/$/, '');
+        var links = document.querySelectorAll('.cm-nav > .cm-nav-links > a.cm-nav-link, .cm-nav > .cm-nav-links > .cm-mi-wrap > a.cm-nav-link');
+        links.forEach(function(a){
+          var href = a.getAttribute('href');
+          if (!href) return;
+          var norm = href.replace(/\/$/, '');
+          if (norm === path || (norm !== '/sv' && path.indexOf(norm + '/') === 0)) a.style.color = 'var(--brand)';
+        });
+      })();</script></nav> </header> <main>  <section style="position:relative;min-height:376px;display:flex;align-items:center;justify-content:center;background-color:#1a1a1a;overflow:hidden"><img srcset="/media/_responsive/news-soccer.jpg.480.webp 480w, /media/_responsive/news-soccer.jpg.960.webp 960w, /media/_responsive/news-soccer.jpg.1440.webp 1440w, /media/_responsive/news-soccer.jpg.2000.webp 2000w" sizes="100vw" src="/media/news-soccer.jpg" alt="" data-atoll-sizes="100vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/><div style="position:absolute;inset:0;background-color:rgba(0,0,0,0.45)"></div><div style="position:relative;z-index:1;text-align:center;color:#fff;padding:0 24px;max-width:800px"><h1 style="font-size:clamp(2rem, 5vw, 3.5rem);font-weight:700;margin-bottom:20px;font-family:var(--font-heading, Montserrat, sans-serif)">Get inspired with SuperInvite</h1><p style="font-size:clamp(1rem, 2.5vw, 1.3rem);font-weight:400;margin-bottom:36px;line-height:1.5">On this page we&#x27;ve collected some articles and other content that may be relevant to SuperInvite or other areas connected to SuperInvite. If you have good advice or tips we could publish here, we&#x27;d appreciate it.</p></div></section>
+<section style="padding:40px 10%;background-color:transparent"><style>
+        .cm-cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1180px; margin: 0 auto; text-align: left; }
+        .cm-cols-3 > [class*="DropZone"] { display: contents; }
+        @media (max-width: 640px) { .cm-cols-3 { grid-template-columns: 1fr; max-width: 100%; } }
+      </style><div class="cm-cols-3" data-atoll-col-sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px"><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-DSC_2685-scaled.jpg.480.webp 480w, /media/_responsive/news-hero-DSC_2685-scaled.jpg.960.webp 960w, /media/_responsive/news-hero-DSC_2685-scaled.jpg.1440.webp 1440w, /media/_responsive/news-hero-DSC_2685-scaled.jpg.1920.webp 1920w, /media/_responsive/news-hero-DSC_2685-scaled.jpg.2560.webp 2560w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-DSC_2685-scaled.jpg" alt="Positive ripple effects around Invite Sport&#x27;s business" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/positive-ringvirkninger-rundt-invite-sport-sin-virksomhet/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Positive ripple effects around Invite Sport&#x27;s business</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Sport creates community, hope, and development – both here at home and in East Africa. That is why we are proud of our partnership with East Africa Cup. East …</p></div></div><a href="/en/news/positive-ringvirkninger-rundt-invite-sport-sin-virksomhet/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-superinvite-bilde-post-nettsiden-13.11.2024.png.480.webp 480w, /media/_responsive/news-hero-superinvite-bilde-post-nettsiden-13.11.2024.png.960.webp 960w, /media/_responsive/news-hero-superinvite-bilde-post-nettsiden-13.11.2024.png.1200.webp 1200w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-superinvite-bilde-post-nettsiden-13.11.2024.png" alt="The registration section in Superinvite gets a new, modern look" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/pameldingsdelen-i-superinvite-far-ny-og-moderne-drakt/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">The registration section in Superinvite gets a new, modern look</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>The original design of Superinvite&#x27;s registration page has done a great job over the past few years. Still, it&#x27;s time to modernize it so that it reflects …</p></div></div><a href="/en/news/pameldingsdelen-i-superinvite-far-ny-og-moderne-drakt/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-ffo.png.480.webp 480w, /media/_responsive/news-ffo.png.600.webp 600w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-ffo.png" alt="New and Improved FFO / Academy Solution in Superinvite" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/ny-og-forbedret-ffo-akademilosning-i-superinvite/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">New and Improved FFO / Academy Solution in Superinvite</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>We have updated Superinvite With a particular focus on Superinvite&#x27;s FFO (after-school football program) and Academy features, we have now released the latest …</p></div></div><a href="/en/news/ny-og-forbedret-ffo-akademilosning-i-superinvite/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-Toppbilde-Oktober-2023.jpg.480.webp 480w, /media/_responsive/news-hero-Toppbilde-Oktober-2023.jpg.800.webp 800w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-Toppbilde-Oktober-2023.jpg" alt="Latest updates, and what&#x27;s coming in the new year 2024." data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/siste-oppdateringer-og-hva-som-kommer-pa-nyaret-2024/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Latest updates, and what&#x27;s coming in the new year 2024.</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Link for direct payment in all payment reminders On all payment reminders that are sent out, there&#x27;s now a new feature available where the user can choose to …</p></div></div><a href="/en/news/siste-oppdateringer-og-hva-som-kommer-pa-nyaret-2024/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-FFO-Akademi.jpg.480.webp 480w, /media/_responsive/news-FFO-Akademi.jpg.600.webp 600w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-FFO-Akademi.jpg" alt="New and improved FFO/Academy solution in Superinvite" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/ny-og-forbedret-ffo-akademilosning-i-superinvite-2/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">New and improved FFO/Academy solution in Superinvite</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>New and improved FFO (after-school football program)/Academy solution Recently we&#x27;ve been working on making the academy solution in Superinvite even better and …</p></div></div><a href="/en/news/ny-og-forbedret-ffo-akademilosning-i-superinvite-2/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Font-bilde-Hosten-2019_4.png.480.webp 480w, /media/_responsive/news-Font-bilde-Hosten-2019_4.png.663.webp 663w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Font-bilde-Hosten-2019_4.png" alt="Exciting news from Superinvite – April 2022" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/spennende-nyheter-fra-superinvite-april-2022/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Exciting news from Superinvite – April 2022</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Hi Easter has passed and we&#x27;re noticing a lot of activity in the clubs these days. It&#x27;s great to see how both children and adults across the whole country can …</p></div></div><a href="/en/news/spennende-nyheter-fra-superinvite-april-2022/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-01.jpg.480.webp 480w, /media/_responsive/news-hero-01.jpg.960.webp 960w, /media/_responsive/news-hero-01.jpg.1440.webp 1440w, /media/_responsive/news-hero-01.jpg.2048.webp 2048w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-01.jpg" alt="Good news, and a happy summer!" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/gode-nyheter-og-god-sommer/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Good news, and a happy summer!</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Brighter times that many have been waiting for are approaching, and in the meantime we haven&#x27;t been sitting idle at Superinvite. Here&#x27;s a bit more information …</p></div></div><a href="/en/news/gode-nyheter-og-god-sommer/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-vs-with-logo.jpg.480.webp 480w, /media/_responsive/news-hero-vs-with-logo.jpg.1000.webp 1000w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-vs-with-logo.jpg" alt="Upgrade and relaunch of VisualFunding 2021." data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/oppgradering-og-relansering-av-visualfunding-2021/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Upgrade and relaunch of VisualFunding 2021.</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>VisualFunding has been a major contributor to strengthening clubs&#x27; finances, allowing them to realize new projects such as new artificial turf fields, sports …</p></div></div><a href="/en/news/oppgradering-og-relansering-av-visualfunding-2021/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-Bilde-nyhetsbrev-mars2022-scaled-e1646829956884.jpg.480.webp 480w, /media/_responsive/news-hero-Bilde-nyhetsbrev-mars2022-scaled-e1646829956884.jpg.1000.webp 1000w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-Bilde-nyhetsbrev-mars2022-scaled-e1646829956884.jpg" alt="New features in Superinvite – March 2022" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/nye-funksjoner-i-superinvite-mars-2022/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">New features in Superinvite – March 2022</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Winter is almost over, and so far it looks like we&#x27;re avoiding new waves of Covid. Here at Superinvite we haven&#x27;t been sitting still, and have recently …</p></div></div><a href="/en/news/nye-funksjoner-i-superinvite-mars-2022/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-1-1024x682-1.jpg.480.webp 480w, /media/_responsive/news-hero-1-1024x682-1.jpg.1024.webp 1024w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-1-1024x682-1.jpg" alt="Stawisha Jamii + SUPERINVITE" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/stawisha-jamii-superinvite/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Stawisha Jamii + SUPERINVITE</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>The Stawisha Jamii foundation helps children and young people in Kenya get a better start in life. The pandemic has left its mark on everyday life there, but …</p></div></div><a href="/en/news/stawisha-jamii-superinvite/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Toppbanner-Nyhetsbrev-Des-2020.png.480.webp 480w, /media/_responsive/news-Toppbanner-Nyhetsbrev-Des-2020.png.663.webp 663w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Toppbanner-Nyhetsbrev-Des-2020.png" alt="Merry Christmas, and a bit of info about new features in Superinvite" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/god-jul-og-litt-info-om-nye-funksjoner-i-superinvite/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Merry Christmas, and a bit of info about new features in Superinvite</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>New features in Superinvite Superinvite has not been resting on its laurels when it comes to developing new features in 2020. We have used the time well, and …</p></div></div><a href="/en/news/god-jul-og-litt-info-om-nye-funksjoner-i-superinvite/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-Depositphotos_131635314_xl-2015-2048x1365-1.jpg.480.webp 480w, /media/_responsive/news-hero-Depositphotos_131635314_xl-2015-2048x1365-1.jpg.960.webp 960w, /media/_responsive/news-hero-Depositphotos_131635314_xl-2015-2048x1365-1.jpg.1440.webp 1440w, /media/_responsive/news-hero-Depositphotos_131635314_xl-2015-2048x1365-1.jpg.2048.webp 2048w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-Depositphotos_131635314_xl-2015-2048x1365-1.jpg" alt="Launch of attendance lists" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/lansering-av-oppmotelister/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Launch of attendance lists</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Superinvite attendance lists and attendance tracking Recently, Superinvite has been updated with a brand new feature for attendance tracking. This is useful in …</p></div></div><a href="/en/news/lansering-av-oppmotelister/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-01.jpg.480.webp 480w, /media/_responsive/news-hero-01.jpg.960.webp 960w, /media/_responsive/news-hero-01.jpg.1440.webp 1440w, /media/_responsive/news-hero-01.jpg.2048.webp 2048w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-01.jpg" alt="Superinvite launches its own App" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/superinvite-lanserer-egen-app/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Superinvite launches its own App</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>New Superinvite App The Superinvite App is built for those who register / pay through Superinvite, and so far more than 80,000 people have their own …</p></div></div><a href="/en/news/superinvite-lanserer-egen-app/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><a href="/en/news/invite-as-dpa/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:0 0 12px">Invite AS DPA</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Invite AS Data Processing Agreement Last Modified: 03.09.2020 This Invite AS Data Processing Agreement (“DPA”), that includes the Standard Contractual Clauses …</p></div></div><a href="/en/news/invite-as-dpa/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><a href="/en/news/invite-as-tos/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:0 0 12px">Invite TOS</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Invite AS Customer Terms of Service Last Modified: 03.09.2020 PLEASE READ THESE CUSTOMER TERMS OF SERVICE CAREFULLY. This is a contract between you (the …</p></div></div><a href="/en/news/invite-as-tos/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-feature-004.png.380.webp 380w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-feature-004.png" alt="Handling refunds" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/handtering-av-refusjoner/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Handling refunds</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>To those of you who have cancelled events due to the Corona situation As everyone is aware, we are in a state of emergency and most sports clubs are struggling …</p></div></div><a href="/en/news/handtering-av-refusjoner/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-Depositphotos_316704554_l-2015-684x1024.jpg.480.webp 480w, /media/_responsive/news-hero-Depositphotos_316704554_l-2015-684x1024.jpg.684.webp 684w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-Depositphotos_316704554_l-2015-684x1024.jpg" alt="Corona Newsletter – Support For Clubs" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/nyhetsbrev-corona-stotte-til-klubber/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Corona Newsletter – Support For Clubs</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Special circumstances call for extraordinary measures! We&#x27;ve therefore made everything ready in Superinvite, so that you can easily ask for support from …</p></div></div><a href="/en/news/nyhetsbrev-corona-stotte-til-klubber/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Depositphotos_11588611_s-2019.jpg.480.webp 480w, /media/_responsive/news-Depositphotos_11588611_s-2019.jpg.678.webp 678w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Depositphotos_11588611_s-2019.jpg" alt="Club Finances in Corona Times" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/okonomi-i-klubber-i-corona-tider/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Club Finances in Corona Times</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Here is some information that can significantly limit your club&#x27;s financial loss during a demanding period. Recently we have received a number of inquiries …</p></div></div><a href="/en/news/okonomi-i-klubber-i-corona-tider/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-hero-Artikkelbilde-Nettside.jpg.480.webp 480w, /media/_responsive/news-hero-Artikkelbilde-Nettside.jpg.960.webp 960w, /media/_responsive/news-hero-Artikkelbilde-Nettside.jpg.1200.webp 1200w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-hero-Artikkelbilde-Nettside.jpg" alt="How to limit the club&#x27;s financial losses in a difficult situation?" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/hvordan-begrense-klubbens-okonomiske-tap-i-en-vanskelig-situasjon/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">How to limit the club&#x27;s financial losses in a difficult situation?</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Here is some information that can significantly limit the club&#x27;s financial losses during a demanding period. Over the past period we have had a number of …</p></div></div><a href="/en/news/hvordan-begrense-klubbens-okonomiske-tap-i-en-vanskelig-situasjon/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Toppbilde-Vinter-2020-Februar_2.png.480.webp 480w, /media/_responsive/news-Toppbilde-Vinter-2020-Februar_2.png.686.webp 686w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Toppbilde-Vinter-2020-Februar_2.png" alt="News from Superinvite – Winter 2020" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/nyheter-fra-superinvite-vinter-2020/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">News from Superinvite – Winter 2020</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>A bit of information from Superinvite Superinvite has had significant growth in 2019, and it&#x27;s very gratifying to see that a large share of the clubs in Norway …</p></div></div><a href="/en/news/nyheter-fra-superinvite-vinter-2020/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Font-bilde-Hosten-2019_4.png.480.webp 480w, /media/_responsive/news-Font-bilde-Hosten-2019_4.png.663.webp 663w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Font-bilde-Hosten-2019_4.png" alt="Important information about Superinvite and NIF Integration" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/viktig-informasjon-rundt-superinvite-og-nif-integrasjon/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Important information about Superinvite and NIF Integration</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Superinvite and NIF integration Superinvite works with several hundred clubs on membership fees and training fees, and will during the fall offer a NIF (the …</p></div></div><a href="/en/news/viktig-informasjon-rundt-superinvite-og-nif-integrasjon/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Post-27.08.2018_2.jpg.480.webp 480w, /media/_responsive/news-Post-27.08.2018_2.jpg.664.webp 664w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Post-27.08.2018_2.jpg" alt="New features in Superinvite – summer 2019" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/nye-funksjoner-i-superinvite-sommer-2019/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">New features in Superinvite – summer 2019</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>We&#x27;re proud to be growing both technically and on the customer side In the run-up to summer, Superinvite has been busy with further development, and has …</p></div></div><a href="/en/news/nye-funksjoner-i-superinvite-sommer-2019/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img src="/media/news-Nyheter_Autotrekk_1.png" alt="Installment Payments and Recurring Payments in Superinvite" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/delbetaling-og-autotrekk-i-superinvite/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Installment Payments and Recurring Payments in Superinvite</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Installment Payments / Recurring Payments With Superinvite&#x27;s installment payment solution, you have everything you need to handle the following needs: Charge …</p></div></div><a href="/en/news/delbetaling-og-autotrekk-i-superinvite/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Nyheter_Kommunikasjon_1.png.376.webp 376w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Nyheter_Kommunikasjon_1.png" alt="Communication expansion" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/kommunikasjon-utvidelse/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Communication expansion</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Communication We also see that many people create their own Superinvite account, even though it&#x27;s only required when using recurring payments. Such an account …</p></div></div><a href="/en/news/kommunikasjon-utvidelse/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img src="/media/news-Nyheter_SI-Konto_1.png" alt="Superinvite account" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/superinvite-konto/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Superinvite account</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Since we launched recurring payments, everyone who pays using that method must have their own Superinvite account. This is for legal and practical reasons. It …</p></div></div><a href="/en/news/superinvite-konto/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Ny-SI-Nettside.png.424.webp 424w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Ny-SI-Nettside.png" alt="How recurring payments (installment payments) work in Superinvite" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/slik-fungerer-autotrekk-delbetaling-i-superinvite/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">How recurring payments (installment payments) work in Superinvite</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Recurring payments (installment payments) in brief Recurring payments through Superinvite mean that once you choose a product, register a participant, and pay …</p></div></div><a href="/en/news/slik-fungerer-autotrekk-delbetaling-i-superinvite/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img src="/media/news-Tertnes-IL.png" alt="Payment for Tertnes FFO Telenor Xtra" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/betaling-av-tertnes-ffo-telenor-xtra/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">Payment for Tertnes FFO Telenor Xtra</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Starting in October, Tertnes switched to recurring payments. Recurring payments mean that once you choose a product, register a participant, and pay, the same …</p></div></div><a href="/en/news/betaling-av-tertnes-ffo-telenor-xtra/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div><div style="font-family:var(--font-body, Roboto, sans-serif);text-align:left;background:#fff;border:1px solid #ebebeb;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:3px;padding:20px;box-sizing:border-box;height:100%"><img srcset="/media/_responsive/news-Ny-SI-Nettside.png.424.webp 424w" sizes="(max-width: 640px) 80vw, (max-width: 1475px) calc((80vw - 64px) / 3), 372px" src="/media/news-Ny-SI-Nettside.png" alt="HSV Recurring Payments for FFO – From October 2018" data-atoll-sizes="auto" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:3px"/><a href="/en/news/hsv-autotrekk-for-ffo-fra-oktober-2018/" style="text-decoration:none;color:inherit"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:600;font-size:20px;line-height:1.35;color:#162B40;margin:18px 0 12px">HSV Recurring Payments for FFO – From October 2018</h3></a><div style="font-size:15px;font-weight:300;line-height:1.8;color:#5C6B79"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Payment for HSV FFO 2018 / 2019 This is an explanation of how to pay for HSV FFO (FFO, the Norwegian after-school football program) from September 2018 through …</p></div></div><a href="/en/news/hsv-autotrekk-for-ffo-fra-oktober-2018/" style="display:inline-block;margin-top:14px;color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none">Read more</a></div></div></section> </main>  <footer> <section style="background-color:var(--brand);padding:56px 7%;font-family:var(--font-body, Roboto, sans-serif)"><div style="display:flex;flex-wrap:wrap;gap:48px;max-width:1100px;margin:0 auto"><div style="flex:1 1 420px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:22px;color:#fff;margin:0 0 18px">Frequently asked questions</h3><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">What is SuperInvite used for?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>SuperInvite is a complete solution for any club or association that wants an easier everyday life around payments and member management.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">How do I get started?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Get in touch with us and we&#x27;ll help you get started. You can also <a href="https://calendly.com/havard-3/superinvite-demo">book a demo</a>.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Where can I find pricing?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>You&#x27;ll find all prices on <a href="/en/priser/">our pricing page</a>.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">How does settlement work in SuperInvite?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Read more about how settlement and finances work on <a href="/en/oppgjor-og-okonomi/">the page about settlement and finances</a>.</p></div></div></details></div><div style="flex:1 1 320px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:22px;color:#fff;margin:0 0 18px">Want to know more?</h3><p style="color:rgba(255,255,255,0.9);font-size:15px;line-height:1.7;margin:0 0 20px">We&#x27;ve put together a page that gives you a full overview of how to use the most important features in SuperInvite.</p><div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><a href="/en/docs/" style="display:inline-flex;align-items:center;gap:8px;background-color:#fff;color:#1a1a1a;padding:12px 24px;border-radius:3px;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.15)">Go to the SuperInvite help page<!-- --> <span aria-hidden="true">›</span></a></div></div></div></section>
+<section style="background-color:#f4f4f4;padding:48px 7% 0;font-family:var(--font-body, Roboto, sans-serif)"><style>.cm-footer-mail { color: var(--brand); text-decoration: none; } .cm-footer-mail:hover, .cm-footer-link:hover { text-decoration: underline; }</style><div style="display:flex;flex-wrap:wrap;gap:40px;max-width:1100px;margin:0 auto;padding-bottom:32px"><div style="flex:1 1 260px"><img src="/media/superinvite-logo-Website-1.png" alt="SuperInvite" style="max-height:48px;max-width:220px"/></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Navigation</h3><a href="/en/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Home</a><a href="/en/kontaktskjema/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Contact form</a><a href="/en/support/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Support</a><a href="/en/ressurser/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Resources</a><a href="/en/priser/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Pricing</a><a href="/en/om-superinvite/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">About SuperInvite</a><a href="/en/stillinger/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Careers</a></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Terms</h3><a href="/en/vilkar-for-deltakere/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Terms for participants</a></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Contact</h3><p style="color:#555;font-size:14px;line-height:1.8;margin:0">Phone<!-- -->: <!-- -->+47 33 22 12 90<br/>Email<!-- -->: <a class="cm-footer-mail" href="mailto:support@superinvite.no">support@superinvite.no</a></p></div></div><div style="border-top:1px solid rgba(0,0,0,0.08);padding:20px 0 24px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:10px;align-items:center"><span style="display:flex;gap:18px"><a href="https://www.facebook.com/innbetalinger" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--brand)"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"></path></svg></a><a href="https://www.instagram.com/cupmanager/" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="var(--brand)" stroke="none"></circle></svg></a></span><span style="color:#888;font-size:13px">Copyright 2026 Superinvite.no</span></div></section> </footer> <a id="preview-btn" href="" class="fixed bottom-20 right-6 bg-amber-500 hover:bg-amber-600 text-black px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 transition-colors z-40 font-medium" style="display:none"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path> <circle cx="12" cy="12" r="3"></circle> </svg>
+Preview Changes
+</a> <script type="module" src="/_astro/PreviewButton.astro_astro_type_script_index_0_lang.B5hjMnvw.js"></script> </body></html>

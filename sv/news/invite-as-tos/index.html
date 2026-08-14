@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="sv"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Invite TOS - SuperInvite</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap"><link rel="alternate" hreflang="no" href="https://www.superinvite.com/no/news/invite-as-tos/"><link rel="alternate" hreflang="sv" href="https://www.superinvite.com/sv/news/invite-as-tos/"><link rel="alternate" hreflang="en" href="https://www.superinvite.com/en/news/invite-as-tos/"><link rel="alternate" hreflang="x-default" href="https://www.superinvite.com/no/news/invite-as-tos/"><link rel="stylesheet" href="/_astro/SiteIcons.CmZCkFoK.css">
+<style>:root{--font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;--font-heading: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;--brand: #41AB34;--brand-ink: #ffffff}.atoll-header{--cm-panel-max-width: none}body{font-family:var(--font-body)}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading)}
+</style></head> <body> <header class="atoll-header"> <a href="/sv/" style="display:inline-flex;align-items:center"><img src="/media/superinvite-logo-Website-1.png" alt="SuperInvite" style="height:48px;width:auto;display:block"/></a>
+<nav class="cm-nav"><style>
+  .atoll-header {
+    --atoll-header-max-width: 1300px;
+    --atoll-header-padding-inline: 30px;
+    --atoll-header-padding-block: 0px;
+    --atoll-header-min-height: 100px;
+    --atoll-header-border-width: 0px;
+    --atoll-header-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+</style><style>
+        .cm-nav { display: flex; align-items: center; gap: 30px; font-family: var(--font-body, Roboto, sans-serif); }
+        .cm-nav-toggle { display: none; }
+        .cm-nav-hamburger { display: none; cursor: pointer; padding: 8px; background: none; border: none; color: #333; }
+        .cm-nav-hamburger svg { display: block; }
+        .cm-nav-links { display: contents; }
+        .cm-nav a.cm-nav-link, .cm-nav span.cm-nav-link { color: #5C6B79; font-weight: 400; font-size: 17px; text-decoration: none; transition: color 0.15s; }
+        /* Chevron inherits the link colour, so it greens on hover too */
+        .cm-nav .cm-caret { margin-left: 5px; flex: none; }
+        @media (min-width: 1024px) {
+          /* Nav items span the full header height (as on cupmanager.net), for
+             two reasons: the mega panel is positioned at top:100% of its item,
+             so anything shorter drops it *inside* the header; and it gives the
+             hover target the whole bar rather than just the text. Going
+             inline-flex also stops the chevron inflating the trigger's line
+             box, which would knock it off the centre line of its neighbours. */
+          /* The nav must fill the header before its items can; otherwise
+             stretching them only reaches the nav's own content height. */
+          .cm-nav { align-self: stretch; }
+          .cm-nav > .cm-nav-links > a.cm-nav-link,
+          .cm-nav > .cm-nav-links > .cm-mi-wrap { align-self: stretch; display: inline-flex; align-items: center; }
+          .cm-nav .cm-mi-wrap > a.cm-nav-link,
+          .cm-nav .cm-mi-wrap > span.cm-nav-link { display: inline-flex; align-items: center; height: 100%; }
+        }
+        .cm-nav a.cm-nav-link:hover, .cm-nav .cm-mi-wrap:hover > a.cm-nav-link, .cm-nav .cm-mi-wrap:hover > span.cm-nav-link { color: var(--brand); }
+        .cm-nav span.cm-nav-link { cursor: default; }
+        @media (max-width: 1024px) {
+          .cm-nav .cm-caret { display: none; }
+          .cm-nav-hamburger { display: block; }
+          .cm-nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-bottom: 1px solid #eee; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); z-index: 50; padding: 0 24px 12px; }
+          .cm-nav-links > a, .cm-nav-links .cm-mi-wrap { display: block; padding: 12px 0; border-top: 1px solid #f0f0f0; }
+          .cm-nav-toggle:checked ~ .cm-nav-links { display: flex; }
+        }
+      </style><input type="checkbox" id="cm-nav-toggle" class="cm-nav-toggle" hidden=""/><label for="cm-nav-toggle" class="cm-nav-hamburger" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label><div class="cm-nav-links"><a href="/sv/" class="cm-nav-link">Hem</a><div class="cm-mi-wrap"><style>
+          /* Deliberately NOT positioned: the panel spans the viewport, so its
+             containing block has to be the header (.atoll-header is relative,
+             from the library's globals) rather than the item. Items stretch to
+             the full header height, so top:100% lands in the same place either
+             way. */
+          .cm-mi-panel { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-top: 1px solid var(--brand); border-bottom: 1px solid var(--brand); z-index: 60; }
+          .cm-mi-wrap:hover > .cm-mi-panel, .cm-mi-wrap:focus-within > .cm-mi-panel { display: block; }
+          /* The two halves meet at the centre of the viewport. Contained keeps
+             them inside the header's content width (cupmanager.net); full lets
+             the colour bleed to the edges (superinvite.com). */
+          .cm-mi-panel-inner { display: flex; max-width: var(--cm-panel-max-width, 1300px); margin: 0 auto; }
+          .cm-mi-panel-highlights { background: var(--brand); flex: 0 0 50%; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; justify-content: center; padding: 44px 20px 44px 27%; }
+          .cm-nav .cm-mi-panel-highlights a.cm-nav-link { color: #fff; font-weight: 400; font-size: 18px; display: inline-flex; align-items: center; gap: 14px; }
+          .cm-mi-panel-highlights svg { width: 20px; height: 20px; flex: none; }
+          .cm-nav .cm-mi-panel-highlights a.cm-nav-link:hover { color: rgba(255,255,255,0.8); }
+          .cm-mi-panel-main { background: #f5f5f5; flex: 0 0 50%; min-width: 0; box-sizing: border-box; padding: 44px 6% 44px 5%; }
+          .cm-mi-panel-heading { font-family: var(--font-heading, Montserrat, sans-serif); font-weight: 600; font-size: 22px; color: #162B40; margin: 0 0 6px; padding-bottom: 14px; border-bottom: 2px solid var(--brand); }
+          /* Multi-column, not grid: the live panels fill the first column
+             before starting the second, and column-count does that for any
+             number of links without the markup naming a row count. */
+          .cm-mi-panel-links { columns: 2; column-gap: 32px; margin-top: 20px; }
+          .cm-nav .cm-mi-panel-links a.cm-nav-link { display: block; break-inside: avoid; margin-bottom: 18px; color: #5C6B79; font-weight: 400; font-size: 15px; }
+          .cm-nav .cm-mi-panel-links a.cm-nav-link:hover { color: var(--brand); }
+          @media (max-width: 1024px) {
+            .cm-mi-panel { display: block; position: static; border: 0; background: transparent; }
+            .cm-mi-panel-inner { display: block; max-width: none; }
+            .cm-mi-panel-highlights { display: none; }
+            .cm-mi-panel-main { background: transparent; padding: 8px 0 0 12px; }
+            .cm-mi-panel-heading { display: none; }
+            .cm-mi-panel-links { columns: 1; margin-top: 4px; }
+            .cm-nav .cm-mi-panel-links a.cm-nav-link { margin-bottom: 10px; }
+          }
+        </style><span class="cm-nav-link" tabindex="0" role="button" aria-haspopup="true">Om SuperInvite<svg class="cm-caret" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><div class="cm-mi-panel"><div class="cm-mi-panel-inner"><div class="cm-mi-panel-highlights"><a href="/sv/funksjoner-i-superinvite/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>Funktioner</a><a href="/sv/nyheter/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Nyheter</a><a href="/sv/priser/" class="cm-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"></circle></svg>Priser</a></div><div class="cm-mi-panel-main"><p class="cm-mi-panel-heading">Vad vill du veta?</p><div class="cm-mi-panel-links"><a href="/sv/fleksibel-losning/" class="cm-nav-link">Flexibel betalningslösning</a><a href="/sv/autotrekk-og-delbetaling/" class="cm-nav-link">Delbetalning och återkommande betalningar</a><a href="/sv/kommunikasjon/" class="cm-nav-link">Kommunikation</a><a href="/sv/oppgjor-og-okonomi/" class="cm-nav-link">Avräkning och ekonomi</a><a href="/sv/lister-og-oversikt/" class="cm-nav-link">Listor och översikt</a><a href="/sv/deltakere-og-qr-kode/" class="cm-nav-link">Deltagare och QR-koder</a></div></div></div></div></div><a href="/sv/support/" class="cm-nav-link">Support</a><a href="/sv/ressurser/" class="cm-nav-link">Resurser</a><div class="cm-mi-wrap cm-mi-drop"><style>
+          /* Positioned on .cm-mi-drop, never on .cm-mi-wrap: the mega panel
+             spans the window and depends on .cm-mi-wrap staying static so that
+             its containing block is the header. This card is the opposite —
+             it hangs off its own item — so only dropdown items get a
+             containing block, and panel items are left alone. */
+          .cm-mi-drop { position: relative; }
+          /* Measured off superinvite.com: a white card the width of two nav
+             items, separated by the same soft shadow as the header itself. */
+          .cm-mi-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 280px; box-sizing: border-box; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 15px; z-index: 60; }
+          .cm-mi-drop:hover > .cm-mi-menu, .cm-mi-drop:focus-within > .cm-mi-menu { display: block; }
+          /* Tighter than the body line-height, to the live card's 37px rows —
+             the labels are single words and nowrap keeps them so. */
+          .cm-nav .cm-mi-menu a.cm-nav-link { display: block; padding: 10px 8px 8px 10px; font-size: 17px; line-height: 1.1; color: #5C6B79; white-space: nowrap; }
+          .cm-nav .cm-mi-menu a.cm-nav-link:hover { color: var(--brand); }
+          @media (max-width: 1024px) {
+            /* No hovering on a phone: the card unfolds into the hamburger menu
+               as an indented list under its item, as the mega panel does. */
+            .cm-mi-menu { display: block; position: static; min-width: 0; background: transparent; box-shadow: none; padding: 4px 0 0 12px; }
+            .cm-nav .cm-mi-menu a.cm-nav-link { padding: 0; margin-bottom: 10px; }
+          }
+        </style><span class="cm-nav-link" tabindex="0" role="button" aria-haspopup="true">Boka demo<svg class="cm-caret" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><div class="cm-mi-menu"><a href="https://calendly.com/havard-3/superinvite-demo" class="cm-nav-link">Norsk</a><a href="https://calendly.com/jimmy-280/superinvite-demo" class="cm-nav-link">Svenska</a><a href="https://calendly.com/petronella/superinvite-demo" class="cm-nav-link">Dansk</a><a href="https://calendly.com/havard-3/superinvite-demo" class="cm-nav-link">English</a></div></div><a href="https://www.superinvite.no/#/login" style="display:inline-flex;align-items:center;gap:8px;background-color:var(--brand);color:#fff;border-radius:3px;font-family:var(--font-body, Roboto, sans-serif);font-weight:300;text-decoration:none;white-space:nowrap;font-size:16px;padding:10px 30px">Logga in</a></div><script>(function(){
+        var path = location.pathname.replace(/\/$/, '');
+        var links = document.querySelectorAll('.cm-nav > .cm-nav-links > a.cm-nav-link, .cm-nav > .cm-nav-links > .cm-mi-wrap > a.cm-nav-link');
+        links.forEach(function(a){
+          var href = a.getAttribute('href');
+          if (!href) return;
+          var norm = href.replace(/\/$/, '');
+          if (norm === path || (norm !== '/sv' && path.indexOf(norm + '/') === 0)) a.style.color = 'var(--brand)';
+        });
+      })();</script></nav> </header> <main class="has-dateline"> <p class="article-date">3 september 2020</p> <section style="padding:60px 10%;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:1140px;margin:0 auto"><h2 class="cm-sec-heading" style="color:#2C3338;font-size:60px;font-weight:600;margin-bottom:14px;font-family:var(--font-heading, Montserrat, sans-serif)">Invite TOS</h2><div style="width:52px;height:3px;background-color:var(--brand);margin:0 0 24px"></div><div style="color:#333;font-size:16px;line-height:1.7;font-family:var(--font-body, Roboto, sans-serif)"></div></div></section>
+<section style="padding:40px 10%;background-color:transparent"><style>
+        .cm-cols-1 { display: grid; grid-template-columns: repeat(1, 1fr); gap: 0px; max-width: 1140px; margin: 0 auto; text-align: left; }
+        .cm-cols-1 > [class*="DropZone"] { display: contents; }
+        @media (max-width: 640px) { .cm-cols-1 { grid-template-columns: 1fr; max-width: 100%; } }
+      </style><div class="cm-cols-1" data-atoll-col-sizes="(max-width: 1425px) 80vw, 1140px"><div><style>.cm-col-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p><strong>Invite AS – allmänna villkor för kunder</strong></p>
+<p>Senast ändrad: 2020-09-03</p>
+<p><strong>LÄS DESSA ALLMÄNNA VILLKOR NOGA.</strong></p>
+<p>Detta är ett avtal mellan dig (Kunden) och oss (Invite AS). Det beskriver de tjänster vi tillhandahåller dig, hur vi kommer att samarbeta och andra aspekter av vår affärsrelation. Det är ett juridiskt dokument, så en del av språket är av nödvändighet &quot;juridiska&quot;, men vi har försökt göra det så läsbart som möjligt. Dessa villkor är så viktiga att vi inte kan tillhandahålla våra produkter och tjänster till dig om du inte godkänner dem. Genom att använda Invite AS tjänster eller Applikationer godkänner du dessa villkor.</p>
+<p>Slutligen vet vi att juridiska villkor ibland kan vara svåra att navigera, så vi ville ge dig en översikt över avtalet:</p>
+<ul>
+<li><strong>A. DEFINITIONER</strong>. Här ger vi detaljer om vad de viktiga definierade begreppen i avtalet betyder. Du kan tänka på detta som en avtalsordlista.</li>
+<li><strong>B. ALLMÄNNA KOMMERSIELLA VILLKOR</strong>. Här hittar du grunderna för hur våra Applikationer och Konsulttjänster tillhandahålls. Till exempel hittar du information om åtkomst och tillåten användning. Dessa villkor gäller för alla våra produkt- och tjänsteerbjudanden.</li>
+<li><strong>C. ALLMÄNNA JURIDISKA VILLKOR</strong>. Som nämnts ovan är detta ett avtal, och avtal är fulla av juridiska villkor. I detta avsnitt har vi samlat de flesta av de återstående juridiska villkoren som utgör våra allmänna villkor för kunder.</li>
+<li><strong>D. JURISDIKTIONSSPECIFIKA VILLKOR</strong>. Med kunder över hela världen är detta sista avsnitt där vi hanterar de flesta skillnaderna i dessa villkor som varierar beroende på kundens plats.</li>
+<li><strong>E. INVITE AS POLICY FÖR TILLÅTEN ANVÄNDNING</strong>. Denna Invite AS-policy för tillåten användning (&quot;AUP&quot;) gäller för användning av alla applikationer, tjänster eller webbplatser som tillhandahålls av oss (Invite AS), oavsett om vi tillhandahåller den direkt eller använder en annan part för att tillhandahålla den till dig.</li>
+</ul>
+<p><strong>A. DEFINITIONER</strong></p>
+<p>&quot;Avtal&quot; avser dessa allmänna villkor för kunder och allt material som det hänvisas till eller länkas till häri. Om du håller koll brukade de allmänna villkoren för kunder kallas Användarvillkor.</p>
+<p>&quot;Betalande användare&quot; avser de typer av Användare för vilka vi tar ut avgifter enligt vad som anges på vår/våra webbsida(or) eller i Applikationerna. Det kan vara du som användare, eller en slutanvändare som betalar för ett utskick eller någon annan produkt som säljs via våra applikationer.</p>
+<p>&quot;Kommunikationstjänster&quot; avser tredjepartsforum, onlinegemenskaper, bloggar, personliga webbsidor, kalendrar och/eller andra sociala mediers kommunikationsfunktioner (såsom Facebook, Twitter och LinkedIn) länkade till eller från Applikationerna som gör att du kan kommunicera med allmänheten eller med en privat grupp.</p>
+<p>&quot;Konfidentiell information&quot; avser all information som tillhandahålls av dig eller oss (&quot;Utlämnaren&quot;) till den andra (&quot;Mottagaren&quot;), muntligen eller skriftligen, som anges vara konfidentiell. Konfidentiell information inkluderar Kunddata och information om Utlämnarens affärsplaner, tekniska data och villkoren i Beställningen. Konfidentiell information inkluderar inte information som (i) är eller blir allmänt känd av allmänheten utan brott mot någon skyldighet gentemot Utlämnaren, eller (ii) var känd av Mottagaren innan den mottogs från Utlämnaren.</p>
+<p>&quot;Kontakt&quot; avser en enskild individ (annan än en Användare) vars kontakt- eller registreringsinformation lagras i Applikationerna.</p>
+<p>&quot;Kontaktinformation&quot; avser namn, e-postadress, telefonnummer, användarnamn online, telefonnummer och liknande information som lämnas av besökare på Applikationerna, eller laddas upp eller matas in direkt av dig i Applikationerna.</p>
+<p>&quot;Konsulttjänster&quot; avser de professionella tjänster som tillhandahålls dig av oss, vilket kan inkludera utbildningstjänster, installation, integration eller andra konsulttjänster. Konsulttjänster är inte begränsade till en betald tjänst och kan tillhandahållas för allmänna supportändamål.</p>
+<p>&quot;Crowdsourcad data&quot; avser den information du lämnar till oss för att uppdatera data i vissa egenskaper i vår databas. Crowdsourcad data ska inte betraktas som Kunddata eller Konfidentiell information i detta avtals mening.</p>
+<p>&quot;Kunddata&quot; avser all information som lämnas in eller samlas in via Applikationerna. Kunddata inkluderar inte Berikningsdata. Kunddata inkluderar inte applikationsadministratörsdata.</p>
+<p>&quot;Kundmaterial&quot; avser allt material som du tillhandahåller eller publicerar, laddar upp, matar in eller lämnar in för offentlig visning genom Applikationerna.</p>
+<p>&quot;Berikningsdata&quot; avser den data vi gör tillgänglig för dig som en del av Applikationerna och Crowdsourcad data. Berikningsdata inkluderar också information om Kontakter, såsom användarnamn på sociala medier, avatarer och alternativa e-postadresser, som vi erhåller från offentliga eller tredjepartskällor.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>&quot;Gratistjänster&quot; avser Applikationerna eller andra produkter eller funktioner som vi gör tillgängliga för dig kostnadsfritt vid uppstart, som gratis provperiod, eller på allmän kostnadsfri basis.</p>
+<p>&quot;Invite AS-innehåll&quot; avser all information, data, text, meddelanden, programvara, ljud, musik, video, fotografier, grafik, bilder och taggar som vi integrerar i Applikationerna eller Konsulttjänsterna, inklusive Berikningsdata.</p>
+<p>&quot;Känslig information&quot; avser (a) kredit- eller betalkortsnummer; personlig ekonomisk kontoinformation; personnummer eller lokala motsvarigheter; passnummer; körkortsnummer eller liknande identifierare; lösenord; ras eller etniskt ursprung; fysiskt eller psykiskt hälsotillstånd eller information; eller annan anställnings-, ekonomisk eller hälsoinformation, inklusive information som omfattas av Health Insurance Portability and Accountability Act, Payment Card Industry Data Security Standards och andra förordningar, lagar eller branschstandarder utformade för att skydda liknande information; och (b) all information som definieras enligt EU:s dataskyddslagar som &quot;känsliga personuppgifter&quot;.</p>
+<p>&quot;Abonnemangsavgift&quot; avser det belopp som betalas till Invite AS för användning av Applikationerna, antingen av dig som kund eller av slutanvändaren som betalar för att använda de tjänster Applikationerna tillhandahåller.</p>
+<p>&quot;Applikationer&quot; avser alla Invite AS Applikationer, verktyg och plattformar som vi gör tillgängliga för dig, och som utvecklas, drivs och underhålls av oss eller en annan angiven URL, samt eventuella tillhörande produkter och tjänster, inklusive webbhotell, som vi tillhandahåller dig.</p>
+<p>&quot;Abonnemangsperiod&quot; avser den inledande perioden du använder de tillämpliga Applikationerna. För Gratistjänster är Abonnemangsperioden den period under vilken du har ett konto för att få tillgång till Gratistjänsterna.</p>
+<p>&quot;Tredjepartsprodukter&quot; avser icke-inbäddade produkter och professionella tjänster som tillhandahålls av tredje part och som samverkar med eller används i samband med Applikationerna.</p>
+<p>&quot;Tredjepartswebbplatser&quot; avser tredje parts webbplatser länkade till från Applikationerna, inklusive Kommunikationstjänster.</p>
+<p>&quot;Användare&quot; avser dina anställda, representanter, konsulter, uppdragstagare eller ombud som är auktoriserade att använda Applikationerna för din räkning och har användaridentiteter och lösenord för Applikationerna.</p>
+<p>&quot;Invite AS&quot;, &quot;vi&quot;, &quot;oss&quot; eller &quot;vår/vårt&quot; avser den tillämpliga avtalsslutande enheten som anges i avsnittet &quot;Avtalsslutande enhet och tillämplig lag&quot;.</p>
+<p>&quot;Du&quot;, &quot;din&quot; eller &quot;Kund&quot; avser den person eller enhet som använder Applikationerna eller mottar Konsulttjänsterna och som identifieras i den tillämpliga kontouppgiften, faktureringsbeskedet, den elektroniska abonnemangsprocessen eller Beställningsformuläret som slutanvändare.</p>
+<p><strong>B. ALLMÄNNA KOMMERSIELLA VILLKOR</strong></p>
+<ol>
+<li>
+<p><strong>Åtkomst.</strong> Under Abonnemangsperioden kommer vi att ge dig tillgång till att använda Applikationerna enligt beskrivningen i detta avtal, eller enligt annan överenskommelse. Vi kan även ge dig tillgång till att använda våra Gratistjänster när som helst genom att aktivera dem i dina Invite AS-applikationskonton. Vi kan tillhandahålla vissa eller alla delar av Applikationerna genom tredjepartsleverantörer.</p>
+</li>
+<li>
+<p><strong>Ytterligare funktioner.</strong> Du kan abonnera på ytterligare funktioner i Applikationerna genom att lägga en ytterligare Beställning eller aktivera de ytterligare funktionerna från ditt Invite AS-konto (om detta alternativ görs tillgängligt av oss). Detta avtal gäller för alla ytterligare Beställningar och alla ytterligare funktioner som du aktiverar inom eller utanför ditt Invite AS-applikationskonto.</p>
+</li>
+<li>
+<p><strong>Tillgänglighet.</strong> Vi försöker göra Applikationerna tillgängliga dygnet runt, alla dagar i veckan, förutom planerad drifttopp för underhåll.</p>
+</li>
+<li>
+<p><strong>Konsulttjänster.</strong> Du kan köpa Konsulttjänster genom att lägga en beställning hos oss. Om vi inte kommer överens om annat levereras Konsulttjänsterna på engelska. Avgifter för dessa Konsulttjänster tillkommer utöver din Applikationsavgift eller kostnad.</p>
+</li>
+</ol>
+<p>Alla Konsulttjänster utförs på distans, om inte du och vi kommer överens om annat.</p>
+<ol start="5">
+<li><strong>Avgifter och betalningar</strong></li>
+</ol>
+<p>a. Applikationsavgifter. Applikationsavgifterna förblir fasta under Abonnemangsperioden om du inte: (i) uppgraderar produkter eller baspaket, (ii) abonnerar på ytterligare funktioner eller produkter, eller (iii) det annars överenskommits.</p>
+<p>b. Betalning mot faktura. Alla fakturerade belopp ska betalas inom fjorton (14) dagar från fakturadatumet, om inte annat överenskommits.</p>
+<p>c. Betalningsinformation. Du håller din kontakt-, faktura- och betalkortsinformation (i förekommande fall) uppdaterad. Alla betalningsförpliktelser är icke-annullerbara, och alla betalda belopp är icke-återbetalningsbara, förutom vad som specifikt anges i detta avtal. Vissa avgifter förfaller och betalas i förskott.</p>
+<p>c. Direkt kontobetalning. Vissa av våra tjänster kan eller kommer att betalas direkt från ditt saldo hos Invite AS betalningsleverantör. Du godkänner i förväg köp av den typ av tjänster vi tillhandahåller inom denna typ av betalningsmetod.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>d. Moms. Avgifter kan inkludera eller/och exkludera skatter, beroende på applikationerna, Invite AS tjänster eller produkter som tillhandahålls av Invite AS. På vår begäran ska du förse oss med det momsregistreringsnummer under vilket du är registrerad i din medlemsstat. Om du omfattas av GST är alla avgifter exklusive GST.</p>
+<ol start="6">
+<li><strong>Användning och begränsningar av användning</strong></li>
+</ol>
+<p>a. Tillåten användning. Du ska följa vår policy för tillåten användning (AUP) enligt beskrivningen i dessa villkor.</p>
+<p>b. Förbjuden och obehörig användning. Du får inte (i) använda eller starta något automatiserat system, inklusive &quot;robotar&quot;, &quot;spindlar&quot; eller &quot;offlineläsare&quot;, som skickar fler förfrågningsmeddelanden till våra servrar under en given tidsperiod än vad en människa rimligen kan producera under samma period med hjälp av en konventionell webbläsare; (ii) använda Applikationerna på ett sätt som skadar, inaktiverar, överbelastar eller försämrar någon av våra webbplatser eller stör en annan parts användning av Applikationerna; (iii) försöka få obehörig åtkomst till Applikationerna; (iv) komma åt Applikationerna på annat sätt än genom vårt gränssnitt; eller (v) använda Applikationerna för något ändamål eller på något sätt som är olagligt eller förbjudet enligt detta avtal.</p>
+<p>Du får inte använda Applikationerna om du enligt lag är förbjuden att motta eller använda Applikationerna enligt lagarna i det land där du är bosatt eller från vilket du får tillgång till eller använder Applikationerna. Applikationerna är inte utformade för att uppfylla branschspecifika regler, så du får inte använda Applikationerna där din kommunikation skulle omfattas av sådana branschspecifika regler eller lagar (till exempel försäkringsbranschen eller säkerhetsbranschen). Du samtycker till att inte använda data från Applikationerna i rättsliga förfaranden eller på annat sätt som bevis.</p>
+<p>Du ska omedelbart meddela oss om obehörig användning av dina Användares identiteter och lösenord eller ditt konto genom att kontakta oss direkt via e-post eller telefon.</p>
+<p>c. Ingen känslig information. DU SAMTYCKER TILL ATT INTE ANVÄNDA APPLIKATIONERNA FÖR ATT SAMLA IN, HANTERA ELLER BEHANDLA KÄNSLIG INFORMATION, OM DET INTE UTTRYCKLIGEN ANGES I DIN INTEGRITETSPOLICY MED GILTIG RÄTTSLIG GRUND. <strong>VI KOMMER INTE ATT HA NÅGOT ANSVAR SOM KAN UPPSTÅ TILL FÖLJD AV DIN ANVÄNDNING AV APPLIKATIONERNA FÖR ATT SAMLA IN ELLER HANTERA KÄNSLIG INFORMATION.</strong></p>
+<p>e. Användning av Kommunikationstjänster. Du samtycker till att endast använda Kommunikationstjänster i enlighet med de användarvillkor som anges av respektive Kommunikationstjänst. Vi kontrollerar inte innehållet, meddelandena eller informationen som finns i Kommunikationstjänsterna. Vi kommer inte att ha något ansvar avseende Kommunikationstjänsterna eller åtgärder som följer av din användning av Kommunikationstjänsterna.</p>
+<p>f. Tredjepartswebbplatser och -produkter. Tredjepartswebbplatser och -produkter är inte under vår kontroll. Tredjepartswebbplatser och -produkter tillhandahålls dig endast som en bekvämlighet, och tillgängligheten av en Tredjepartswebbplats eller -produkt innebär inte att vi stöder, godkänner eller garanterar den.</p>
+<ol start="7">
+<li><strong>Abonnemangsperiod, uppsägning, avstängning</strong></li>
+</ol>
+<p>a. Ingen förtida uppsägning; inga återbetalningar. Vi ger inga återbetalningar om du bestämmer dig för att sluta använda Invite AS-applikationerna innan utskicket eller den planerade användningen är avslutad.</p>
+<p>b. Uppsägning med saklig grund. Endera parten kan säga upp detta avtal med saklig grund, avseende någon eller alla Applikationer: (i) med trettio (30) dagars varsel till den andra parten om ett väsentligt avtalsbrott om avtalsbrottet inte har åtgärdats vid periodens utgång, eller (ii) omedelbart, om den andra parten blir föremål för en konkursansökan eller annat förfarande relaterat till insolvens, likvidation eller överlåtelse till förmån för borgenärer. Vi kan även säga upp detta avtal med saklig grund med trettio (30) dagars varsel om vi bedömer att du agerar eller har agerat på ett sätt som negativt påverkar eller kan påverka oss, våra framtidsutsikter eller våra kunder. Detta avtal kan i övrigt inte sägas upp före Abonnemangsperiodens slut.</p>
+<p>c. Avstängning för otillåtna handlingar. Vi kan stänga av en Användares åtkomst till någon eller alla Applikationer utan förvarning för: (i) användning av Applikationerna på ett sätt som bryter mot tillämpliga lokala, statliga, federala eller utländska lagar eller regler eller villkoren i detta avtal, (ii) användning av Invite AS e-postutskickstjänst som resulterar i överdrivna hårda studsar, SPAM-klagomål via feedbackloopar, direkta spamklagomål eller begäranden om borttagning från en sändlista av mottagare, eller (iii) upprepade fall av att publicera eller ladda upp material som intrångar eller påstås intrångar på upphovsrätts- eller varumärkesrättigheter för någon person eller enhet. Vi kan, utan förvarning, granska, redigera och ta bort Kunddata, slutanvändardata eller Kundmaterial som vi i god tro bedömer bryter mot dessa villkor eller AUP, förutsatt att vi inte har någon skyldighet att förhandsgranska, kontrollera, övervaka eller redigera din Kunddata, slutanvändardata eller Kundmaterial.</p>
+<p>d. Avstängning för utebliven betalning. Vi kommer att meddela dig om utebliven betalning av utestående belopp. Om inte hela beloppet har betalats kan vi stänga av din åtkomst till någon eller alla Applikationer tio (10) dagar efter sådant meddelande. Vi kommer inte att stänga av Applikationerna medan du på ett rimligt och godtroende sätt bestrider de tillämpliga avgifterna och samarbetar aktivt för att lösa tvisten. Om en Applikation stängs av på grund av utebliven betalning kan vi ta ut en återaktiveringsavgift för att återställa Applikationerna.</p>
+<p>e. Avstängning vid pågående skada. Om din webbplats eller användning av Applikationerna: (i) utsätts för överbelastningsattacker eller annan störande aktivitet, (ii) används för att engagera sig i överbelastningsattacker eller annan störande aktivitet, (iii) skapar en säkerhetsrisk för Applikationerna eller andra, (iv) förbrukar överdriven bandbredd, eller (v) orsakar skada för oss eller andra, kan vi, med elektroniskt eller telefonmeddelande till dig, stänga av all eller viss åtkomst till Applikationerna. Vi kommer att försöka begränsa avstängningen till den berörda delen av Applikationerna och snabbt lösa de problem som orsakar avstängningen. Inget i denna klausul begränsar vår rätt att säga upp avtalet med saklig grund enligt ovan, om vi bedömer att du agerar eller har agerat på ett sätt som negativt påverkar eller kan påverka oss, våra framtidsutsikter eller våra kunder.</p>
+<p>f. Avstängning och uppsägning av Gratistjänster. Vi kan stänga av, begränsa eller säga upp Gratistjänsterna av vilken anledning som helst, när som helst, utan förvarning. Vi kan säga upp ditt abonnemang på Gratistjänsterna på grund av inaktivitet.</p>
+<p>g. Effekt av uppsägning eller upphörande. Om ditt betalda abonnemang sägs upp eller upphör kan vi välja att fortsätta göra våra Gratistjänster tillgängliga för dig, och du fortsätter att omfattas av detta avtal så länge du har tillgång till ett Invite AS-applikationskonto.</p>
+<p>Vid uppsägning eller upphörande av detta avtal ska du upphöra med all användning av de berörda Applikationerna och Invite AS-innehåll, och om vi begär det, förse oss med skriftlig bekräftelse på att du har upphört med all användning av Berikningsdata. Vi kan, men behöver inte, ge dig möjlighet att hämta Kunddata efter uppsägning eller upphörande, beroende på typen av tillämpligt abonnemang enligt vad som anges i avsnittet &quot;Hämtning av Kunddata&quot; nedan. Om du säger upp detta avtal med saklig grund kommer vi omgående att återbetala eventuella förbetalda men outnyttjade avgifter som täcker användning av Applikationerna efter uppsägningen. Om vi säger upp detta avtal med saklig grund ska du omgående betala alla obetalda avgifter som förfaller fram till slutet av Abonnemangsperioden. Avgifter är i övrigt icke-återbetalningsbara.</p>
+<p><strong>Hämtning av Kunddata.</strong> Så länge du har betalat alla avgifter du är skyldig oss, om du gör en skriftlig begäran inom trettio (30) dagar efter uppsägning eller upphörande av ditt abonnemang, kommer vi att ge dig tillfällig tillgång till Applikationerna för att hämta, eller vi kommer att förse dig med kopior av, all Kunddata som då är i vår besittning eller kontroll. Om vi ger dig tillfällig tillgång till kontot kan vi ta ut en återaktiveringsavgift. Vi kan hålla inne tillgång till Kunddata tills du betalar eventuella avgifter du är skyldig oss. Trettio (30) dagar efter uppsägning eller upphörande av ditt abonnemang har vi ingen skyldighet att bevara eller tillhandahålla dig Kunddata och kan, om det inte är lagligt förbjudet, radera all Kunddata i våra system eller på annat sätt under vår kontroll.</p>
+<p><strong>C. ALLMÄNNA JURIDISKA VILLKOR</strong></p>
+<ol>
+<li><strong>Kunddata</strong></li>
+</ol>
+<p>a. Begränsningar för Invite AS. Vi kommer inte att använda, eller tillåta någon annan att använda, Kunddata för att kontakta någon individ eller något företag utom enligt din instruktion eller annat tillstånd. Vi kommer endast att använda Kunddata för att tillhandahålla Applikationerna och Konsulttjänsterna till dig och endast i den mån det tillåts enligt tillämplig lag och detta avtal. Vi kommer inte att använda Kunddata för våra egna marknadsföringsändamål.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>b. Aggregerad data. Vi kan övervaka användningen av Applikationerna av alla våra kunder och använda de insamlade uppgifterna på ett aggregerat och anonymt sätt. Du samtycker till att vi får använda och publicera sådan information, förutsatt att informationen inte innehåller någon Kunddata och/eller identifierar dig.</p>
+<p>c. Skyddsåtgärder. Vi kommer att upprätthålla kommersiellt rimliga administrativa, fysiska och tekniska skyddsåtgärder för att skydda Kunddata.</p>
+<ol start="2">
+<li><strong>Invite AS immateriella rättigheter.</strong> Detta är ett avtal om åtkomst till och användning av Applikationerna, och du beviljas ingen licens till någon programvara genom detta avtal. Applikationerna skyddas av immaterialrättslig lagstiftning, tillhör oss eller våra licensgivare (om sådana finns), och vi behåller alla äganderätter till dem. Du samtycker till att inte kopiera, hyra ut, leasa, sälja, distribuera eller skapa bearbetningar baserade på Invite AS-innehåll eller Applikationerna, utom när det uttryckligen tillåts skriftligen av oss.</li>
+</ol>
+<p>Om vi gör Berikningsdata tillgänglig för dig får du endast använda den Berikningsdatan i samband med din användning av Applikationerna (om du inte förstås har en annan källa än Applikationerna för sådan Berikningsdata). Berikningsdata kan göras tillgänglig för dig baserat på Kunddata, men vi kommer inte att använda din Kunddata för att berika data för andra parter. Den Berikningsdata vi tillhandahåller kan komma från eller via tredjepartsleverantörer eller offentliga källor.</p>
+<p>Vi uppmuntrar alla kunder att kommentera Applikationerna, lämna förslag på förbättringar och rösta på förslag de gillar. Du samtycker till att alla sådana kommentarer och förslag ska vara icke-konfidentiella och att vi äger alla rättigheter att använda och integrera dem i Applikationerna eller Konsulttjänsterna, utan ersättning eller erkännande till dig.</p>
+<ol start="3">
+<li>
+<p><strong>Kundens immateriella rättigheter.</strong> Mellan parterna äger och behåller du alla rättigheter till Kundmaterial och Kunddata. Detta avtal ger oss inga äganderätter till Kundmaterial eller Kunddata. Du ger oss och våra licensgivare tillstånd att använda Kundmaterial och Kunddata endast i den mån det är nödvändigt för att tillhandahålla Applikationerna till dig och i den mån det tillåts enligt detta avtal. Om du använder Applikationerna på uppdrag av en annan part garanterar du att du har alla tillräckliga och nödvändiga rättigheter och tillstånd för att göra det.</p>
+</li>
+<li>
+<p><strong>Sekretess.</strong> Mottagaren ska: (i) skydda sekretessen för den Konfidentiella informationen med samma grad av omsorg som den använder för sin egen konfidentiella information av liknande natur, men inte mindre än rimlig omsorg, (ii) inte använda någon Konfidentiell information för något ändamål utanför omfattningen av detta avtal, (iii) inte avslöja Konfidentiell information till någon tredje part (förutom våra tredjepartsleverantörer), och (iv) begränsa åtkomsten till Konfidentiell information till sina anställda, uppdragstagare, rådgivare och ombud. Efter meddelande till Utlämnaren får Mottagaren avslöja Konfidentiell information om det krävs enligt federal, statlig eller lokal lag, förordning, regel, stämning eller rättsligt förfarande.</p>
+</li>
+<li>
+<p><strong>Marknadsföring.</strong> Du ger oss rätten att lägga till ditt namn och företagslogotyp till vår kundlista och webbplats.</p>
+</li>
+<li>
+<p><strong>Skadeslöshet.</strong> Du ska hålla oss skadeslösa, på egen bekostnad, försvara och gottgöra oss mot alla tredjepartskrav, stämningar, åtgärder eller förfaranden (vardera en &quot;Talan&quot;) som riktas mot oss (och våra tjänstemän, styrelseledamöter, anställda, ombud, tjänsteleverantörer, licensgivare och närstående bolag) av en tredje part som inte är knuten till oss, i den mån sådan Talan baseras på eller uppstår ur (a) obehörig eller olaglig användning av Applikationerna från din sida, (b) din bristande efterlevnad av eller brott mot detta avtal, (c) din användning av Tredjepartsprodukter, eller (d) obehörig användning av Applikationerna av någon annan person som använder din Användarinformation. Vi kommer att: meddela dig skriftligen inom trettio (30) dagar efter att vi blivit medvetna om ett sådant krav; ge dig ensam kontroll över försvaret eller förlikningen av ett sådant krav; och förse dig (på din bekostnad) med all information och assistans som du rimligen begär för att hantera försvaret eller förlikningen av kravet. Du får inte acceptera någon förlikning som (i) ålägger oss en skyldighet; (ii) kräver att vi medger något; eller (iii) medför ansvar som inte omfattas av dessa gottgörelser eller inför restriktioner för oss utan vårt föregående skriftliga samtycke.</p>
+</li>
+<li>
+<p><strong>Friskrivningar; ansvarsbegränsningar</strong></p>
+</li>
+</ol>
+<p>a. Friskrivning från garantier. VI OCH VÅRA NÄRSTÅENDE BOLAG OCH OMBUD LÄMNAR INGA UTFÄSTELSER ELLER GARANTIER OM LÄMPLIGHET, TILLFÖRLITLIGHET, TILLGÄNGLIGHET, AKTUALITET, SÄKERHET ELLER RIKTIGHET AV APPLIKATIONERNA, DATA SOM GÖRS TILLGÄNGLIG FRÅN APPLIKATIONERNA, INVITE AS-INNEHÅLL, ELLER KONSULTTJÄNSTERNA FÖR NÅGOT ÄNDAMÅL. PROGRAMMERINGSGRÄNSSNITT (API:ER) KANSKE INTE ÄR TILLGÄNGLIGA HELA TIDEN. I DEN UTSTRÄCKNING LAGEN TILLÅTER TILLHANDAHÅLLS APPLIKATIONERNA OCH INVITE AS-INNEHÅLL &quot;I BEFINTLIGT SKICK&quot; UTAN NÅGON GARANTI ELLER VILLKOR AV NÅGOT SLAG. VI FRISKRIVER OSS FRÅN ALLA GARANTIER OCH VILLKOR AV NÅGOT SLAG, VARE SIG UTTRYCKLIGA, UNDERFÖRSTÅDDA ELLER LAGSTADGADE, AVSEENDE APPLIKATIONERNA OCH KONSULTTJÄNSTERNA, INKLUSIVE ALLA UNDERFÖRSTÅDDA GARANTIER ELLER VILLKOR OM SÄLJBARHET, LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL, ÄGANDERÄTT OCH ICKE-INTRÅNG.</p>
+<p>b. Inga indirekta skador. I DEN UTSTRÄCKNING LAGEN TILLÅTER SKA INGENDERA PARTEN UNDER NÅGRA OMSTÄNDIGHETER VARA ANSVARIG FÖR NÅGRA INDIREKTA, TILLFÄLLIGA, BESTRAFFANDE ELLER FÖLJDSKADOR, ELLER FÖRLUST AV VINST, INTÄKTER, DATA ELLER AFFÄRSMÖJLIGHETER; FÖRUTSATT ATT DENNA BEGRÄNSNING INTE SKA GÄLLA FÖR DIG OM DU ENDAST ANVÄNDER GRATISTJÄNSTERNA.</p>
+<p>c. Ansvarsbegränsning. FÖRUTOM DITT ANSVAR FÖR BETALNING AV AVGIFTER, DITT ANSVAR SOM UPPSTÅR UR DINA SKYLDIGHETER ENLIGT AVSNITTET &quot;SKADESLÖSHET&quot;, OCH DITT ANSVAR FÖR BROTT MOT VÅRA IMMATERIELLA RÄTTIGHETER, OM, OAVSETT DE ÖVRIGA VILLKOREN I DETTA AVTAL, ENDERA PARTEN FASTSTÄLLS HA NÅGOT ANSVAR GENTEMOT DEN ANDRA PARTEN ELLER NÅGON TREDJE PART, ÄR PARTERNA ÖVERENS OM ATT EN PARTS SAMLADE ANSVAR SKA BEGRÄNSAS TILL DET LÄGRE AV FEMTUSEN EURO ELLER DE TOTALA BELOPP DU FAKTISKT HAR BETALAT FÖR APPLIKATIONERNA UNDER DE TOLV MÅNADERNA FÖRE DEN HÄNDELSE SOM GAV UPPHOV TILL KRAVET; FÖRUTSATT ATT DENNA BEGRÄNSNING INTE SKA GÄLLA FÖR DIG OM DU ENDAST ANVÄNDER GRATISTJÄNSTERNA, OCH I SÅ FALL, OM VI FASTSTÄLLS HA NÅGOT ANSVAR GENTEMOT DIG ELLER NÅGON TREDJE PART SOM UPPSTÅR UR DIN ANVÄNDNING AV GRATISTJÄNSTERNA, SKA VÅRT SAMLADE ANSVAR BEGRÄNSAS TILL ETT HUNDRA EURO.</p>
+<p>d. Tredjepartsprodukter. VI FRISKRIVER OSS FRÅN ALLT ANSVAR AVSEENDE TREDJEPARTSPRODUKTER SOM DU ANVÄNDER. VÅRA LICENSGIVARE SKA INTE HA NÅGOT ANSVAR AV NÅGOT SLAG ENLIGT DETTA AVTAL.</p>
+<p>e. Samtycke till ansvarsbegränsning. DU FÖRSTÅR OCH SAMTYCKER TILL ATT UTAN DITT SAMTYCKE TILL DENNA ANSVARSBEGRÄNSNING SKULLE VI INTE TILLHANDAHÅLLA APPLIKATIONERNA TILL DIG.</p>
+<ol start="8">
+<li><strong>Övrigt</strong></li>
+</ol>
+<p>a. Ändring; inget avstående. Vi kan uppdatera och ändra hela eller delar av dessa allmänna villkor för kunder, inklusive avgifter och kostnader förknippade med användningen av Applikationerna (men dina avgifter och kostnader ändras inte under användningen av applikationerna). Om vi uppdaterar eller ändrar dessa allmänna villkor för kunder kommer de uppdaterade villkoren att publiceras på vår webbplats/applikationsportal. De uppdaterade villkoren träder i kraft och blir bindande inom trettio (30) dagar efter publicering. När vi ändrar dessa allmänna villkor kommer datumet för &quot;Senast ändrad&quot; ovan att uppdateras för att återspegla datumet för den senaste versionen. Vi uppmuntrar dig att granska dessa allmänna villkor regelbundet.</p>
+<p>Om du inte godkänner en ändring av de allmänna villkoren måste du meddela oss skriftligen inom trettio (30) dagar efter att ha mottagit meddelande om ändringen. Om du ger oss detta meddelande fortsätter ditt abonnemang att styras av villkoren i de allmänna villkoren före ändringen under resten av din nuvarande period. Vid förnyelse gäller de allmänna villkor som vi publicerat på vår webbplats.</p>
+<p>Ingen fördröjning i utövandet av någon rättighet eller åtgärd, eller underlåtenhet att invända, ska anses vara ett avstående från sådan rättighet eller åtgärd eller någon annan rättighet eller åtgärd. Ett avstående vid ett tillfälle ska inte anses vara ett avstående från någon rättighet eller åtgärd vid något framtida tillfälle.</p>
+<p>b. Force majeure. Ingen av parterna ska ansvara för underlåtenhet eller försening i utförandet om det orsakas av: krigshandling, fientlighet eller sabotage; force majeure-händelse; el-, internet- eller telekommunikationsavbrott som inte orsakats av den förpliktade parten; myndighetsrestriktioner; eller annan händelse utanför den förpliktade partens rimliga kontroll. Varje part ska göra rimliga ansträngningar för att mildra effekten av en force majeure-händelse.</p>
+<p>c. Tillåtna åtgärder. Förutom åtgärder för utebliven betalning eller brott mot en parts äganderätter får ingen talan, oavsett form, som uppstår ur eller är relaterad till detta avtal, väckas av någon av parterna mer än ett (1) år efter att grunden för talan uppstod.</p>
+<p>d. Parternas förhållande. Du och vi samtycker till att inget joint venture, partnerskap, anställnings- eller ombudsförhållande föreligger mellan oss.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>e. Efterlevnad av lagar. Vi ska följa alla federala lagar (där tillämpligt) i vårt tillhandahållande av Applikationerna, Konsulttjänsterna och vår behandling av Kunddata. Vi förbehåller oss rätten att när som helst avslöja information om det är nödvändigt för att uppfylla någon lag, förordning, rättsligt förfarande eller myndighetsbegäran. Du ska följa alla lagar i din användning av Applikationerna och Konsulttjänsterna, inklusive tillämpliga exportlagar. Du får inte direkt eller indirekt exportera, återexportera eller överföra Applikationerna till förbjudna länder eller individer eller tillåta användning av Applikationerna av förbjudna länder eller individer.</p>
+<p>f. Delbarhet. Om någon del av detta avtal fastställs vara ogiltig eller overkställbar enligt tillämplig lag, ska den ogiltiga eller overkställbara bestämmelsen anses ersatt av en giltig, verkställbar bestämmelse som ligger så nära den ursprungliga bestämmelsens avsikt som möjligt, och resten av detta avtal fortsätter att gälla.</p>
+<p>g. Meddelanden. Meddelanden ska skickas till den kontaktadress som anges häri och ska anses levererade från och med det faktiska mottagningsdatumet.</p>
+<p>Till Invite AS: Hovinveien 43 B, Oslo, Norge</p>
+<p>Till dig: din adress enligt vad som anges i vår Invite AS-systemkontoinformation. Vi kan lämna elektroniska meddelanden genom ett allmänt meddelande via Applikationerna och kan lämna elektroniska meddelanden riktade specifikt till dig via e-post till din registrerade e-postadress i vår kontoinformation för dig eller genom Applikationernas meddelandecenter. Vi kan meddela dig via telefonsamtal till de telefonnummer som är registrerade i vår kontoinformation för dig. Du måste hålla all din kontoinformation aktuell eller informera oss om eventuella ändringar.</p>
+<p>h. Hela avtalet. Detta avtal, tillsammans med vårt personuppgiftsbiträdesavtal (DPA), utgör huvudavtalet mellan oss för Applikationerna och Konsulttjänsterna. Om särskilda eller ytterligare avtal undertecknas utöver dessa villkor och DPA:et betraktas de som en del av avtalet. Vi invänder mot och avvisar alla ytterligare eller avvikande villkor som föreslås av dig, inklusive de som finns i din inköpsorder, ditt godkännande eller din webbplats. Våra skyldigheter är inte villkorade av leverans av framtida funktionalitet eller funktioner i Applikationerna, eller beroende av muntliga eller skriftliga offentliga kommentarer vi gör om framtida funktionalitet eller funktioner i Applikationerna. Vi kan göra versioner av detta avtal tillgängliga på andra språk än engelska. Om vi gör det ska den engelska versionen av detta avtal styra vårt förhållande, och den översatta versionen tillhandahålls endast för bekvämlighets skull och ska inte tolkas som en ändring av den engelska versionen av avtalet.</p>
+<p>i. Överlåtelse. Du får inte överlåta eller överföra detta avtal, inklusive genom fusion, omorganisation, försäljning av hela eller väsentligen alla dina tillgångar, ändrat ägarförhållande eller genom lag, utan vårt föregående skriftliga samtycke, vilket inte ska hållas tillbaka på ett orimligt sätt. Vi kan överlåta detta avtal till ett närstående bolag eller vid fusion, omorganisation, försäljning av hela eller väsentligen alla våra tillgångar, ändrat ägarförhållande eller genom lag.</p>
+<p>j. Inga tredjepartsförmånstagare. Inget i detta avtal, uttryckligt eller underförstått, är avsett att, eller ska, ge någon tredje part person eller enhet någon rättighet, förmån eller gottgörelse av något slag enligt eller på grund av detta avtal.</p>
+<p>k. Avtal om tjänster. Detta avtal är ett avtal om tillhandahållande av tjänster och inte ett avtal om försäljning av varor.</p>
+<p>l. Behörighet. Vardera parten intygar och garanterar den andra att den har full befogenhet och behörighet att ingå detta avtal och att det är bindande för sådan part och verkställbart i enlighet med dess villkor.</p>
+<p><strong>E. JURISDIKTIONSSPECIFIKA VILLKOR</strong></p>
+<ol>
+<li><strong>Databehandling inom EU/EES och Schweiz.</strong></li>
+</ol>
+<p>Invite AS deltar i och har certifierat sin efterlevnad av EU-U.S. Privacy Shield Framework enligt vad som anges av det amerikanska handelsdepartementet gällande insamling, användning och lagring av Personuppgifter (enligt definitionen i Invite AS personuppgiftsbiträdesavtal) som överförs från Europeiska ekonomiska samarbetsområdet och/eller Schweiz, i tillämpliga fall, till USA. I den mån Invite AS behandlar Personuppgifter som en del av Kunddata som omfattas av den allmänna dataskyddsförordningen (&quot;GDPR&quot;), på Kundens vägnar, vid tillhandahållandet av tjänsterna enligt detta avtal, ska villkoren i Invite AS personuppgiftsbiträdesavtal, vilka härmed införlivas genom hänvisning, gälla. För kunder som är belägna inom Europeiska unionen eller Europeiska ekonomiska samarbetsområdet gäller Europeiska kommissionens antagna standardavtalsklausuler, bifogade personuppgiftsbiträdesavtalet med Invite AS, som ger adekvata skyddsåtgärder avseende de personuppgifter vi behandlar enligt detta avtal och i enlighet med bestämmelserna i vårt personuppgiftsbiträdesavtal. Du bekräftar att Invite AS i samtliga fall agerar som personuppgiftsbiträde för Kunddata och att du är personuppgiftsansvarig för Kunddata enligt tillämpliga dataskyddsregler inom Europeiska unionen och Europeiska ekonomiska samarbetsområdet. Kunden ska inhämta och upprätthålla alla nödvändiga samtycken som krävs för att tillåta behandling av Kunddata enligt detta avtal. Om du omfattas av GDPR förstår du att om du ger en integrationsleverantör tillgång till ditt Invite AS-konto agerar du som personuppgiftsansvarig för sådan information och integrationsleverantören agerar som personuppgiftsbiträde vid tillämpning av de dataskyddslagar och -regler som gäller för dig. I inget fall är sådana integrationsleverantörer våra underbiträden.</p>
+<p>a. Fel. Om Applikationerna fastställs ha ett fel ska du meddela oss skriftligen. Vi kommer att åtgärda väsentliga fel inom rimlig tid. Om vi inte kan göra det återbetalar vi till dig den proportionella andelen av faktiskt betalda avgifter som är hänförlig till det oåtgärdade väsentliga felet. Du får inte dra av detta belopp från din Abonnemangsavgift, om inte ditt krav är obestritt eller har bekräftats genom en slutlig domstolsdom. Du har inget anspråk för ett fel enligt detta avsnitt om: (i) det orsakas av din användning av Applikationerna i strid med detta avtal, eller (ii) det är ett fel relaterat till våra Gratistjänster som inte medvetet har dolts av oss. Med förbehåll för den ansvarsbegränsning som anges i detta avtal är återbetalningen som beskrivs i detta avsnitt din enda och exklusiva gottgörelse för felanspråk.</p>
+<p>b. Uppsägning med saklig grund. Avsnittet &quot;Uppsägning med saklig grund&quot; ovan ersätts i sin helhet med följande:</p>
+<p>&quot;Endera parten kan säga upp detta avtal med saklig grund, avseende någon eller alla Applikationer, med trettio (30) dagars varsel till den andra parten om ett väsentligt avtalsbrott om avtalsbrottet inte har åtgärdats vid periodens utgång. Vi kan även säga upp detta avtal med saklig grund med trettio (30) dagars varsel om vi bedömer att du agerar eller har agerat på ett sätt som negativt påverkar eller kan påverka oss, våra framtidsutsikter eller våra kunder.</p>
+<p>Detta avtal kan i övrigt inte sägas upp före Abonnemangsperiodens slut. Rätten för endera parten att säga upp detta avtal av tvingande skäl enligt anspråk om extraordinär uppsägning enligt den tyska civillagen (BGB) påverkas inte.&quot;</p>
+<p>c. Efterlevnad av lagar. Vi ska följa alla EU-förordningar (där tillämpligt) i vårt tillhandahållande av Applikationerna och vår behandling av Kunddata. Vi förbehåller oss rätten att när som helst avslöja information om det är nödvändigt för att uppfylla någon lag, förordning, rättsligt förfarande eller myndighetsbegäran. Du ska följa alla lagar i din användning och mottagande av Applikationerna, inklusive tillämpliga exportlagar. Du måste följa alla tillämpliga lagar relaterade till inspelning av telefonsamtal och säkerställa att korrekt samtycke till inspelning erhålls innan sådan inspelning görs. Du får inte direkt eller indirekt exportera, återexportera eller överföra Applikationerna till förbjudna länder eller individer eller tillåta användning av Applikationerna av förbjudna länder eller individer.</p>
+<p>d. Friskrivningar; ansvarsbegränsningar. Avsnittet &quot;Friskrivningar; ansvarsbegränsningar&quot; ovan ersätts i sin helhet med följande:</p>
+<p>&quot;a. Friskrivning från garantier. VÅRA APPLIKATIONER OCH KONSULTTJÄNSTER KOMMER ATT TILLHANDAHÅLLAS PÅ ETT PROFESSIONELLT SÄTT I ENLIGHET MED SEDVANLIGA BRANSCHSTANDARDER MED RIMLIG OMSORG OCH SKICKLIGHET. VI OCH VÅRA NÄRSTÅENDE BOLAG OCH OMBUD LÄMNAR INGA UTFÄSTELSER ELLER GARANTIER OM LÄMPLIGHETEN AV APPLIKATIONERNA, DATA SOM GÖRS TILLGÄNGLIG FRÅN APPLIKATIONERNA, INVITE AS-INNEHÅLL, ELLER KONSULTTJÄNSTERNA FÖR ETT VISST ÄNDAMÅL, EJ HELLER OM EN SPECIFIK TILLFÖRLITLIGHET, TILLGÄNGLIGHET, AKTUALITET, SÄKERHET ELLER RIKTIGHET AV APPLIKATIONERNA, DATA SOM GÖRS TILLGÄNGLIG FRÅN APPLIKATIONERNA, INVITE AS-INNEHÅLL, UTOM OM SÄRSKILT ÖVERENSKOMMET.</p>
+<p>PROGRAMMERINGSGRÄNSSNITT (API:ER) KANSKE INTE ÄR TILLGÄNGLIGA HELA TIDEN.</p>
+<p>VÅRA GRATISTJÄNSTER, INKLUSIVE API:ER, TILLHANDAHÅLLS &quot;I BEFINTLIGT SKICK&quot; UTAN NÅGON GARANTI ELLER VILLKOR AV NÅGOT SLAG. VI FRISKRIVER OSS FRÅN ALLA GARANTIER OCH VILLKOR AV NÅGOT SLAG, VARE SIG UTTRYCKLIGA, UNDERFÖRSTÅDDA ELLER LAGSTADGADE, AVSEENDE APPLIKATIONERNA OCH KONSULTTJÄNSTERNA, INKLUSIVE ALLA UNDERFÖRSTÅDDA GARANTIER ELLER VILLKOR OM SÄLJBARHET, LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL, ÄGANDERÄTT OCH ICKE-INTRÅNG.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>b. Fullt ansvar. Vi ska vara ansvariga gentemot dig utan begränsning för förlust eller skada du faktiskt lider och som orsakas av: (i) vårt bedrägliga agerande, (ii) vårt avsiktliga agerande, (iii) vår grova vårdslöshet, (iv) vår skada på liv, kropp eller hälsa. Förutsatt dock att de begränsningar som i övrigt anges nedan ska gälla för: (w) våra Gratistjänster, (x) förluster eller skador orsakade av vår lindriga vårdslöshet, (y) förluster eller skador orsakade av grov vårdslöshet hos anställda som inte är legala ombud eller ledande befattningshavare, och (z) vårt strikta ansvar som kan uppstå från väsentliga fel i Applikationerna som redan förelåg vid ditt abonnemangs början. De anspråk för vilka vi är ansvariga gentemot dig utan begränsning enligt detta avsnitt benämns gemensamt &quot;Anspråk med fullt ansvar&quot;.</p>
+<p>c. Inga indirekta skador. FÖRUTOM ANSPRÅK MED FULLT ANSVAR SKA, I DEN UTSTRÄCKNING LAGEN TILLÅTER, INGENDERA PARTEN UNDER NÅGRA OMSTÄNDIGHETER VARA ANSVARIG FÖR NÅGRA INDIREKTA, TILLFÄLLIGA, BESTRAFFANDE ELLER FÖLJDSKADOR, ELLER FÖRLUST AV VINST, INTÄKTER, DATA ELLER AFFÄRSMÖJLIGHETER.</p>
+<p>d. Ansvarsbegränsning. FÖRUTOM DITT ELLER SLUTANVÄNDARENS ANSVAR FÖR BETALNING AV AVGIFTER, DITT ANSVAR SOM UPPSTÅR UR DINA SKYLDIGHETER ENLIGT AVSNITTET &quot;SKADESLÖSHET&quot;, DITT ANSVAR FÖR BROTT MOT VÅRA IMMATERIELLA RÄTTIGHETER, OCH VÅRT ANSVAR FÖR ANSPRÅK MED FULLT ANSVAR, OM, OAVSETT DE ÖVRIGA VILLKOREN I DETTA AVTAL, ENDERA PARTEN FASTSTÄLLS HA NÅGOT ANSVAR GENTEMOT DEN ANDRA PARTEN ELLER NÅGON TREDJE PART, ÄR PARTERNA ÖVERENS OM ATT EN PARTS SAMLADE ANSVAR SKA BEGRÄNSAS TILL DET LÄGRE AV FEMTUSEN EURO, ELLER DE TOTALA BELOPP DU FAKTISKT HAR BETALAT FÖR APPLIKATIONERNA UNDER DE TOLV MÅNADERNA FÖRE DEN HÄNDELSE SOM GAV UPPHOV TILL KRAVET; FÖRUTSATT ATT DENNA BEGRÄNSNING INTE SKA GÄLLA FÖR DIG OM DU ENDAST ANVÄNDER GRATISTJÄNSTERNA, OCH I SÅ FALL, OM VI FASTSTÄLLS HA NÅGOT ANSVAR GENTEMOT DIG ELLER NÅGON TREDJE PART SOM UPPSTÅR UR DIN ANVÄNDNING AV GRATISTJÄNSTERNA, SKA VÅRT SAMLADE ANSVAR BEGRÄNSAS TILL ETT HUNDRA EURO.</p>
+<p>e. Tredjepartsprodukter. VI FRISKRIVER OSS FRÅN ALLT ANSVAR AVSEENDE TREDJEPARTSPRODUKTER SOM DU ANVÄNDER. VÅRA LICENSGIVARE SKA INTE HA NÅGOT ANSVAR AV NÅGOT SLAG ENLIGT DETTA AVTAL.</p>
+<p>f. FÖRUTOM ANSPRÅK MED FULLT ANSVAR SKA PRESKRIPTIONSTIDEN FÖR ALLA GARANTI- OCH ANSVARSANSPRÅK VARA ETT ÅR.&quot;</p>
+<p><strong>E. INVITE AS POLICY FÖR TILLÅTEN ANVÄNDNING</strong></p>
+<p>Denna AUP är utformad för att säkerställa efterlevnad av de lagar och regler som gäller för Invite AS-tjänsten. Denna AUP skyddar också intressena hos alla våra kunder och deras kunder, samt vår goodwill och rykte. Dessa villkor är så viktiga att vi inte kan tillhandahålla Invite AS-applikationerna om du inte godkänner dem. Genom att använda Invite AS-applikationerna godkänner du dessa villkor.</p>
+<p>Om du använder någon Invite AS-applikation gäller denna AUP för dig. Varje kund hos oss samtycker till att följa denna AUP och ansvarar för eventuella överträdelser. Du får inte hjälpa eller engagera andra på ett sätt som skulle bryta mot denna AUP. Vi kommer att upprätthålla och säkerställa efterlevnad av denna AUP genom metoder vi anser lämpliga, såsom klagomåls- och e-postfelövervakning.</p>
+<ol>
+<li><strong>Rapportering av misstänkta överträdelser</strong></li>
+</ol>
+<p>Vi uppmuntrar mottagare av e-postmeddelanden som skickats med hjälp av Invite AS-applikationerna att rapportera misstänkta överträdelser av denna AUP till oss genom att vidarebefordra en kopia av det mottagna e-postmeddelandet med FULLSTÄNDIGA sidhuvuden. Vi har en policy att utreda alla sådana rapporter och att svara på det sätt vi anser lämpligt.</p>
+<p>Om du känner till eller misstänker en överträdelse av denna AUP ska du omgående meddela oss skriftligen om den kända eller misstänkta överträdelsen.</p>
+<ol start="2">
+<li><strong>Ingen SPAM tillåten</strong></li>
+</ol>
+<p>Du får inte använda Invite AS-applikationerna på något sätt (direkt eller indirekt) för att skicka, överföra, hantera, distribuera eller leverera: (a) oönskad e-post (&quot;spam&quot; eller &quot;spamming&quot;) i strid med någon lag; (b) e-post till en adress som erhållits via internet-skrapningsmetoder eller andra hemliga metoder (t.ex. scraping eller harvesting); (c) e-post till en adress som är ofullständig, felaktig och/eller inte uppdaterad för alla tillämpliga avanmälningsmeddelanden, med bästa ansträngning och bästa branschpraxis.</p>
+<ol start="3">
+<li><strong>Förbjudet e-postinnehåll och formatering; bästa praxis för e-post</strong></li>
+</ol>
+<p>E-post som skickas, eller får skickas, till eller genom Invite AS-applikationerna får inte: (a) använda eller innehålla ogiltiga eller förfalskade sidhuvuden; (b) använda eller innehålla ogiltiga eller icke-existerande domännamn; (c) använda någon teknik för att på annat sätt förvanska, dölja eller dölja information som identifierar ursprungspunkten eller överföringsvägen; (d) använda andra metoder för vilseledande adressering; (e) använda en tredje parts internetdomännamn utan deras samtycke, eller reläas från eller genom en tredje parts utrustning utan tredje partens tillstånd; (f) innehålla falsk eller vilseledande information i ämnesraden eller på annat sätt innehålla falskt eller vilseledande innehåll; eller (g) använda våra varumärken, slogans eller logotyper utan vårt föregående skriftliga samtycke och endast då i enlighet med våra riktlinjer för varumärkesanvändning.</p>
+<p>Dessutom är det förbjudet att använda Invite AS-applikationerna för att skicka e-post till: (a) köpta, hyrda eller lånade listor, och (b) listor som sannolikt resulterar i ett överdrivet antal avanmälningsbegäran eller SPAM-klagomål eller meddelanden, enligt vedertagen branschpraxis.</p>
+<ol start="4">
+<li><strong>Krav på avanmälan från e-post</strong></li>
+</ol>
+<p>Du garanterar att varje e-post du skickar eller som skickas för din räkning med hjälp av Invite AS-applikationerna kommer att innehålla: (a) sidhuvudinformation som inte är falsk eller vilseledande; och (b) en upplysning om att mottagaren kan avanmäla sig, avstå eller på annat sätt kräva att användningen av dess information för oönskad, otillåten och/eller olämplig kommunikation enligt beskrivningen i denna AUP upphör (och hur mottagaren kan meddela dig att den vill avanmäla sig eller stoppa denna användning av sin information). Dessa krav gäller eventuellt inte om det skickade e-postmeddelandet är ett transaktionsmeddelande och dessa krav inte annars krävs enligt lag. Du garanterar att du omgående kommer att följa alla avanmälnings-, &quot;ring inte&quot;- och &quot;skicka inte&quot;-begäranden.</p>
+<ol start="5">
+<li><strong>Telefonmarknadsföring</strong></li>
+</ol>
+<p>Du måste följa alla lagar relaterade till telefonmarknadsföring, inklusive men inte begränsat till de som specifikt nämns i avsnittet &quot;Korrekt användning av Invite AS-tjänsten&quot; nedan. Du måste följa alla lagar relaterade till inspelning av telefonsamtal och säkerställa att korrekt samtycke till inspelning erhålls innan sådan inspelning görs.</p>
+<ol start="6">
+<li><strong>Ingen störning</strong></li>
+</ol>
+<p>Du samtycker till att inte använda Invite AS-applikationerna på ett sätt som påverkar den normala driften, integriteten eller säkerheten för någon annans egendom. Någon annans egendom inkluderar någon annans konto(n), domännamn, URL:er, webbplats(er), nätverk, system, anläggningar, utrustning, data, annan information eller affärsverksamhet. Du samtycker även till att inte använda Invite AS-applikationerna för att få obehörig åtkomst till, använda, övervaka eller på ett obehörigt sätt referera till någon annans egendom, om du inte har lämpligt uttryckligt föregående samtycke att göra så. Exempel på förbjudna handlingar inkluderar (utan begränsning): hackning, spoofing, överbelastningsattacker, mailbombning och/eller att skicka e-post som innehåller eller överför virus eller spridande maskar, eller skadlig kod, oavsett om det är spionprogram, adware eller andra sådana filer eller program. Du samtycker även till att inte använda Invite AS-applikationerna på ett sätt som orsakar eller kan orsaka att Invite AS IP-adresser, Invite AS-domäner eller Invite AS-kunddomäner svartlistas. Dessa begränsningar gäller oavsett din avsikt och oavsett om du agerar avsiktligt eller oavsiktligt.</p></div></div></div></section><section style="padding-bottom:34px;text-align:left"><style>.cm-sec-heading:has(> [data-puck-overlay-portal]:empty) { display: none; }</style><div style="max-width:100%;margin:0 auto"><div style="color:#5C6B79;font-size:15px;line-height:1.93;font-weight:300;padding-left:23px;font-family:var(--font-body, Roboto, sans-serif)"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><ol start="7">
+<li><strong>Korrekt användning av Invite AS-tjänsterna och -applikationerna</strong></li>
+</ol>
+<p>Utan att begränsa de övriga kraven i denna AUP får du inte (direkt eller indirekt) använda Invite AS-applikationerna med innehåll, eller på ett sätt, som:</p>
+<ul>
+<li>är hotfullt, kränkande, trakasserande, förföljande eller ärekränkande;</li>
+<li>är vilseledande, falskt, felaktigt eller bedrägligt;</li>
+<li>inkräktar på någon annans integritet eller på annat sätt bryter mot någon annans lagliga rättigheter (såsom rätten till integritet och offentlighet);</li>
+<li>innehåller vulgärt, obscent, oanständigt eller olagligt material;</li>
+<li>gör intrång i tredje parts immateriella rättigheter;</li>
+<li>publicerar, postar, laddar upp eller på annat sätt distribuerar programvara, musik, videor eller annat material skyddat av immaterialrättslig lagstiftning (eller av rätten till integritet eller offentlighet) om du inte har alla nödvändiga rättigheter och samtycken att göra så;</li>
+<li>laddar upp filer som innehåller virus, skadade filer eller annan liknande programvara eller program som kan skada driften av en annan persons dator;</li>
+<li>laddar ner filer som du vet, eller rimligen borde veta, inte lagligen kan distribueras på det sättet;</li>
+<li>förfalskar eller raderar upphovsmannaangivelser, juridiska eller äganderättsliga beteckningar, etiketter om ursprunget eller källan till programvara, eller annat material i en uppladdad fil;</li>
+<li>begränsar eller hindrar någon annan användare av Invite AS-applikationerna från att använda och dra nytta av vår webbplats och/eller Invite AS-tjänsten;</li>
+<li>samlar in eller på annat sätt hämtar information om andra, inklusive e-postadresser, utan deras samtycke;</li>
+<li>bryter mot användarstandarder eller regler för en enhet som påverkas av din användning, inklusive men inte begränsat till en internetleverantör (ISP), e-postleverantör (ESP), eller nyhets- eller användargrupp (inklusive men inte begränsat till att kringgå eller överskrida rättigheter och begränsningar för utrustningsanvändning och/eller detaljer om plats- och vägidentifiering);</li>
+<li>är juridiskt indrivningsbart mellan privata parter;</li>
+<li>inte utgör godtroende användning av tjänsten, till exempel att ladda upp Kontakter utöver din Kontaktnivå, skicka e-post till dessa Kontakter och sedan snart därefter rensa bort dem; och/eller</li>
+</ul>
+<p>Du ska använda Invite AS-applikationerna för dina interna affärsändamål och får inte: (i) avsiktligt manipulera säkerheten för Invite AS-applikationerna eller manipulera våra kundkonton; (ii) komma åt data i Invite AS-applikationerna som inte är avsedd för dig; (iii) logga in på en server eller ett konto i Invite AS-applikationerna som du inte är auktoriserad att komma åt; (iv) försöka undersöka, skanna eller testa sårbarheten hos någon Invite AS-applikation eller bryta säkerhets- eller autentiseringsåtgärder utan korrekt behörighet; (v) avsiktligt göra någon del av Invite AS-applikationerna obrukbar; (vi) leasa, distribuera, licensiera, sälja eller på annat sätt kommersiellt utnyttja Invite AS-applikationerna eller göra Invite AS-applikationerna tillgängliga för en tredje part på annat sätt än vad som avses i ditt abonnemang på Invite AS-tjänsten; (vii) använda Invite AS-applikationerna för timesharing- eller serviceburåändamål eller på annat sätt till förmån för en tredje part; eller (viii) tillhandahålla tredje part en utvärderingsversion av Invite AS-applikationerna utan vårt föregående skriftliga samtycke.</p>
+<ol start="8">
+<li><strong>Användning av Invite AS varumärke</strong></li>
+</ol>
+<p>Om du inte har vårt uttryckliga föregående skriftliga tillstånd får du inte använda något namn, logotyp, slogan eller annat märke som tillhör oss eller Invite AS-tjänsten, eller någon identifierare eller tagg som genereras av Invite AS-tjänsten, inklusive men inte begränsat till: (a) som en hyperlänk till en webbplats eller annan plats (förutom vad som uttryckligen tillhandahålls eller möjliggörs av oss); eller (b) för att antyda identifiering med oss som anställd, uppdragstagare, ombud eller liknande representativ kapacitet. Du samtycker även till att inte ta bort eller ändra något av dessa element som vi kan ha tillhandahållit eller möjliggjort.</p>
+<ol start="9">
+<li><strong>Allmänna villkor</strong></li>
+</ol>
+<p>Vi kan omedelbart stänga av din åtkomst till Invite AS-applikationerna om du bryter mot denna AUP eller inte svarar oss inom rimlig tid efter att vi har kontaktat dig om en potentiell överträdelse av denna AUP. Vi kan även stänga av din åtkomst enligt vad vi förklarar i våra allmänna villkor för kunder och, om du bryter mot denna AUP, kan vi säga upp ditt abonnemangsavtal med saklig grund. Du bekräftar att vi kan lämna ut information om din användning av någon Invite AS-applikation för att uppfylla lag, förordning, myndighetsbegäran, domstolsbeslut, stämning eller annat rättsligt förfarande. Om vi gör denna typ av obligatoriskt utlämnande kommer vi att meddela dig, om vi inte är skyldiga att hålla utlämnandet konfidentiellt.</p>
+<p>Vi är inte skyldiga, men kan välja, att ta bort förbjudet material och neka åtkomst till någon person som bryter mot denna AUP. Vi förbehåller oss vidare alla andra rättigheter.</p></div></div></div></section></div></div></section> </main> <style>
+        /* Order: title section (0), dateline (1), everything after (2). */
+        main.has-dateline { display: flex; flex-direction: column; }
+        main.has-dateline > .article-date { order: 1; }
+        main.has-dateline > :nth-child(n + 3) { order: 2; }
+        .article-date {
+          max-width: 1140px;
+          width: 100%;
+          margin: -30px auto 24px;
+          padding: 0 24px;
+          box-sizing: border-box;
+          font-size: 14px;
+          color: #888;
+        }
+      </style> <footer> <section style="background-color:var(--brand);padding:56px 7%;font-family:var(--font-body, Roboto, sans-serif)"><div style="display:flex;flex-wrap:wrap;gap:48px;max-width:1100px;margin:0 auto"><div style="flex:1 1 420px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:22px;color:#fff;margin:0 0 18px">Vanliga frÃ¥gor</h3><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Vad anvÃ¤nds SuperInvite till?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>SuperInvite Ã¤r en komplett lÃ¶sning fÃ¶r alla klubbar och fÃ¶reningar som vill ha en enklare vardag kring inbetalningar och medlemshantering.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Hur kommer jag igÃ¥ng?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Kontakta oss sÃ¥ hjÃ¤lper vi dig igÃ¥ng. Du kan ocksÃ¥ <a href="https://calendly.com/havard-3/superinvite-demo">boka en demo</a>.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Var hittar jag priser?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>Du hittar alla priser pÃ¥ <a href="/sv/priser/">vÃ¥r prissida</a>.</p></div></div></details><style>.cm-faq-dark .cm-rich a { color: #fff; text-decoration: underline; } .cm-faq-dark .cm-rich a:hover { color: rgba(255,255,255,0.85); }</style><details class="cm-faq-dark" style="border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0"><summary style="font-family:var(--font-body, Roboto, sans-serif);font-weight:700;font-size:16px;cursor:pointer;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center">Hur fungerar avrÃ¤kning i SuperInvite?<svg class="cm-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:16px;flex-shrink:0;transition:transform 0.15s"><path d="M6 9l6 6 6-6"></path></svg><style>details[open] > summary > .cm-faq-chevron { transform: rotate(180deg); }</style></summary><div style="font-family:var(--font-body, Roboto, sans-serif);font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-top:12px;padding-right:32px"><style>
+.cm-rich > *:first-child { margin-top: 0; }
+.cm-rich > *:last-child { margin-bottom: 0; }
+.cm-rich p { margin: 0 0 0.9em; }
+.cm-rich ul { list-style: disc; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 0.9em; }
+.cm-rich li { margin: 0.3em 0; }
+.cm-rich a { color: var(--brand); text-decoration: none; }
+.cm-rich a:hover { text-decoration: underline; }
+.cm-rich strong { font-weight: 700; }
+.cm-rich blockquote { border-left: 3px solid var(--brand); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 0.85; }
+.cm-rich h3, .cm-rich h4 { font-weight: 700; margin: 1.2em 0 0.5em; font-family: var(--font-heading, Montserrat, sans-serif); }
+.cm-rich h3 { font-size: 1.25em; }
+.cm-rich h4 { font-size: 1.1em; }
+.cm-rich table { border-collapse: collapse; margin: 1em 0; }
+.cm-rich th, .cm-rich td { border: 1px solid #d5d5d5; padding: 5px 10px; text-align: center; }
+.cm-rich th { background: rgba(0,0,0,0.045); font-weight: 700; }
+.cm-rich img { max-width: 100%; height: auto; }
+.cm-rich hr { border: none; border-top: 1px solid rgba(0,0,0,0.12); margin: 1.4em 0; }
+</style><div class="cm-rich"><p>LÃ¤s mer om hur avrÃ¤kning och ekonomi fungerar pÃ¥ <a href="/sv/oppgjor-og-okonomi/">sidan om avrÃ¤kning och ekonomi</a>.</p></div></div></details></div><div style="flex:1 1 320px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:22px;color:#fff;margin:0 0 18px">Vill du veta mer?</h3><p style="color:rgba(255,255,255,0.9);font-size:15px;line-height:1.7;margin:0 0 20px">Vi har samlat en sida som ger dig full Ã¶versikt Ã¶ver hur du anvÃ¤nder de viktigaste funktionerna i SuperInvite.</p><div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><a href="/sv/docs/" style="display:inline-flex;align-items:center;gap:8px;background-color:#fff;color:#1a1a1a;padding:12px 24px;border-radius:3px;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.15)">GÃ¥ till SuperInvite hjÃ¤lpsida<!-- --> <span aria-hidden="true">›</span></a></div></div></div></section>
+<section style="background-color:#f4f4f4;padding:48px 7% 0;font-family:var(--font-body, Roboto, sans-serif)"><style>.cm-footer-mail { color: var(--brand); text-decoration: none; } .cm-footer-mail:hover, .cm-footer-link:hover { text-decoration: underline; }</style><div style="display:flex;flex-wrap:wrap;gap:40px;max-width:1100px;margin:0 auto;padding-bottom:32px"><div style="flex:1 1 260px"><img src="/media/superinvite-logo-Website-1.png" alt="SuperInvite" style="max-height:48px;max-width:220px"/></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Navigation</h3><a href="/sv/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Hem</a><a href="/sv/kontaktskjema/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">KontaktformulÃ¤r</a><a href="/sv/support/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Support</a><a href="/sv/ressurser/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Resurser</a><a href="/sv/priser/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Priser</a><a href="/sv/om-superinvite/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Om SuperInvite</a><a href="/sv/stillinger/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Lediga tjÃ¤nster</a></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Villkor</h3><a href="/sv/vilkar-for-deltakere/" class="cm-footer-link" style="color:var(--brand);text-decoration:none;font-size:14px;display:block;margin-bottom:8px">Villkor fÃ¶r deltagare</a></div><div style="flex:1 1 180px"><h3 style="font-family:var(--font-heading, Montserrat, sans-serif);font-weight:700;font-size:17px;color:#1a1a1a;margin:0 0 18px">Kontakt</h3><p style="color:#555;font-size:14px;line-height:1.8;margin:0">Telefon<!-- -->: <!-- -->+47 33 22 12 90<br/>E-post<!-- -->: <a class="cm-footer-mail" href="mailto:support@superinvite.no">support@superinvite.no</a></p></div></div><div style="border-top:1px solid rgba(0,0,0,0.08);padding:20px 0 24px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:10px;align-items:center"><span style="display:flex;gap:18px"><a href="https://www.facebook.com/innbetalinger" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--brand)"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"></path></svg></a><a href="https://www.instagram.com/cupmanager/" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="var(--brand)" stroke="none"></circle></svg></a></span><span style="color:#888;font-size:13px">Copyright 2026 Superinvite.no</span></div></section> </footer> <a id="preview-btn" href="" class="fixed bottom-20 right-6 bg-amber-500 hover:bg-amber-600 text-black px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 transition-colors z-40 font-medium" style="display:none"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path> <circle cx="12" cy="12" r="3"></circle> </svg>
+Preview Changes
+</a> <script type="module" src="/_astro/PreviewButton.astro_astro_type_script_index_0_lang.B5hjMnvw.js"></script> </body></html>
