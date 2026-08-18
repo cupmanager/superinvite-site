@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /atoll/
 Allow: /
 
-Sitemap: https://www.superinvite.com/sitemap-index.xml
+Sitemap: https://superinvite.com/sitemap-index.xml
